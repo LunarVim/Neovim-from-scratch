@@ -55,4 +55,10 @@ Next we need to install python support (node is optional)
 
   ```
   npm i -g neovim
-  ```
+
+
+---
+
+> The computing scientist's main challenge is not to get confused by the complexities of his own making. 
+
+\- Edsger W. Dijkstra

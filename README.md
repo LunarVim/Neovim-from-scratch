@@ -4,6 +4,7 @@
 
 Make sure to remove or move your current `nvim` directory
 
+**IMPORTANT** requires `Neovim 0.6 release` version
 ```
 git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
 ```

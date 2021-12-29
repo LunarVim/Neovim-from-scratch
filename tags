@@ -1,0 +1,43 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/binx/Repositories/Neovim-from-scratch/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+Get healthy	README.md	/^## Get healthy$/;"	s	chapter:Neovim from scratch
+M.on_attach	lua/user/lsp/handlers.lua	/^M.on_attach = function(client, bufnr)$/;"	f
+M.setup	lua/user/lsp/handlers.lua	/^M.setup = function()$/;"	f
+Neovim from scratch	README.md	/^# Neovim from scratch$/;"	c
+Try out this config	README.md	/^## Try out this config$/;"	s	chapter:Neovim from scratch
+["<S-Tab>"]	lua/user/cmp.lua	/^    ["<S-Tab>"] = cmp.mapping(function(fallback)$/;"	f
+["<Tab>"]	lua/user/cmp.lua	/^    ["<Tab>"] = cmp.mapping(function(fallback)$/;"	f
+_G.set_terminal_keymaps	lua/user/toggleterm.lua	/^function _G.set_terminal_keymaps()$/;"	f
+_HTOP_TOGGLE	lua/user/toggleterm.lua	/^function _HTOP_TOGGLE()$/;"	f
+_LAZYGIT_TOGGLE	lua/user/toggleterm.lua	/^function _LAZYGIT_TOGGLE()$/;"	f
+_NCDU_TOGGLE	lua/user/toggleterm.lua	/^function _NCDU_TOGGLE()$/;"	f
+_NODE_TOGGLE	lua/user/toggleterm.lua	/^function _NODE_TOGGLE()$/;"	f
+_PYTHON_TOGGLE	lua/user/toggleterm.lua	/^function _PYTHON_TOGGLE()$/;"	f
+check_backspace	lua/user/cmp.lua	/^local check_backspace = function()$/;"	f
+close_command	lua/user/bufferline.lua	/^    close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"$/;"	f
+description	lua/user/lsp/settings/jsonls.lua	/^    description = "The AWS Serverless Application Model (AWS SAM, previously known as Project Fl/;"	f
+expand	lua/user/cmp.lua	/^    expand = function(args)$/;"	f
+extend	lua/user/lsp/settings/jsonls.lua	/^local function extend(tab1, tab2)$/;"	f
+fmt	lua/user/lualine.lua	/^	fmt = function(str)$/;"	f
+footer	lua/user/alpha.lua	/^local function footer()$/;"	f
+format	lua/user/cmp.lua	/^    format = function(entry, vim_item)$/;"	f
+hide_in_width	lua/user/lualine.lua	/^local hide_in_width = function()$/;"	f
+left_mouse_command	lua/user/bufferline.lua	/^    left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"$/;"	f
+lsp_highlight_document	lua/user/lsp/handlers.lua	/^local function lsp_highlight_document(client)$/;"	f
+lsp_keymaps	lua/user/lsp/handlers.lua	/^local function lsp_keymaps(bufnr)$/;"	f
+middle_mouse_command	lua/user/bufferline.lua	/^    middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"$/;"	f
+numbers	lua/user/bufferline.lua	/^    numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, rai/;"	f
+open_fn	lua/user/plugins.lua	/^    open_fn = function()$/;"	f
+pre_hook	lua/user/comment.lua	/^  pre_hook = function(ctx)$/;"	f
+progress	lua/user/lualine.lua	/^local progress = function()$/;"	f
+right_mouse_command	lua/user/bufferline.lua	/^    right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"$/;"	f
+spaces	lua/user/lualine.lua	/^local spaces = function()$/;"	f

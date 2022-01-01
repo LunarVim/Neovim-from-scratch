@@ -63,8 +63,8 @@ function _HTOP_TOGGLE()
 	htop:toggle()
 end
 
-local python = Terminal:new({ cmd = "python", hidden = true })
+local python3 = Terminal:new({ cmd = "python3", hidden = true })
 
-function _PYTHON_TOGGLE()
-	python:toggle()
+function _PYTHON3_TOGGLE()
+	python3:toggle()
 end

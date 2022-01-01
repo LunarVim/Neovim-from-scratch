@@ -25,6 +25,15 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Window Splits                                                                                                                                                              
+keymap("n", "<C-v>", ":vsplit <CR>", opts)                                                                                                                                    
+keymap("n", "<C-z>", ":split <CR>", opts)                                                                                                                                     
+                                                                                                                                                                              
+-- Save and Quit                                                                                                                                                              
+keymap("n", "<C-w>", ":w <CR>", opts)                                                                                                                                         
+keymap("n", "<C-q>", ":q <CR>", opts)                                                                                                                                         
+                                       
+
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- Resize with arrows

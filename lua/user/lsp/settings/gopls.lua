@@ -11,6 +11,7 @@ return {
           "-bazel-mux"
       },
         gofumpt = true,
+        ["local"] = "github.com/muxinc/mux",
         usePlaceholders = true,
         semanticTokens = true,
         codelenses = {

@@ -88,9 +88,16 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		commit = "518e27589c0463af15463c9d675c65e464efc2fe",
 	})
-
-	-- Git
+  -- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
+  use "tpope/vim-fugitive"
+  use "tpope/vim-rhubarb" -- Open Github in a browser
+  use "junegunn/gv.vim" -- Git history
+  use "AGhost-7/critiq.vim" -- Pull requests in Git
+
+  use "BurntSushi/ripgrep"
+  use "vimwiki/vimwiki"
+  use "tools-life/taskwiki"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

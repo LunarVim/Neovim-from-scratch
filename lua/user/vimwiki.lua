@@ -1,3 +1,4 @@
+config = function()
 vim.g.vimwiki_list = {
   { 
     path = '~/vimwiki',
@@ -17,13 +18,20 @@ vim.g.indentLine_conceallevel = 2 -- indentline controlls concel
 vim.api.nvim_set_keymap("n", "<F3>", ":VimwikiDiaryPrevDay<CR>", { noremap = true, silent = true, nowait = true })
 vim.api.nvim_set_keymap("n", "<F4>", ":VimwikiDiaryNextDay<CR>", { noremap = true, silent = true, nowait = true })
 
+end
+
+
 vim.cmd [[
  autocmd BufNewFile */diary/????-??-??.md call New_vimwiki_diary_template()
 
 function New_vimwiki_diary_template()
 "" If it's Friday, open a end of week lookback template
    if system('date +%u') == 5
+<<<<<<< HEAD
         read ~/vimwiki/Diary\ TemplateEndOfWeek.md | execute "normal ggdd"
+=======
+        read ~/vimwiki/new_vimwiki_diary_templateDiary\ TemplateEndOfWeek.md | execute "normal ggdd"
+>>>>>>> de95ae2 (adding vimwiki and lua config for it, fugitive and other git plugins and ripgrep)
     else
         read  ~/vimwiki/Diary\ Template.md | execute "normal ggdd"
     end

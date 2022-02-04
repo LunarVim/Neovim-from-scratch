@@ -19,19 +19,12 @@ dashboard.section.buttons.val = {
 	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
 	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
 	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
+	dashboard.button("k", "-  Knowledgebase", ":e ~/vimwiki/Knowledgebase.md <CR>"),
+	dashboard.button("d", "-  Diary", ":e ~/vimwiki/diary <CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 
-local function footer()
--- NOTE: requires the fortune-mod package to work
-	-- local handle = io.popen("fortune")
-	-- local fortune = handle:read("*a")
-	-- handle:close()
-	-- return fortune
-	return "chrisatmachine.com"
-end
-
-dashboard.section.footer.val = footer()
+-- dashboard.section.footer.val = footer()
 
 dashboard.section.footer.opts.hl = "Type"
 dashboard.section.header.opts.hl = "Include"

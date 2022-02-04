@@ -23,7 +23,7 @@ vim.cmd [[
 function New_vimwiki_diary_template()
 "" If it's Friday, open a end of week lookback template
    if system('date +%u') == 5
-        read ~/vimwiki/new_vimwiki_diary_templateDiary\ TemplateEndOfWeek.md | execute "normal ggdd"
+        read ~/vimwiki/Diary\ TemplateEndOfWeek.md | execute "normal ggdd"
     else
         read  ~/vimwiki/Diary\ Template.md | execute "normal ggdd"
     end

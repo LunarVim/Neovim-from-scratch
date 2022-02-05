@@ -68,3 +68,9 @@ local python = Terminal:new({ cmd = "python", hidden = true })
 function _PYTHON_TOGGLE()
 	python:toggle()
 end
+
+local task = Terminal:new({ cmd = "taskwarrior-tui", hidden = true })
+
+function _TASK_TOGGLE()
+  task:toggle()
+end

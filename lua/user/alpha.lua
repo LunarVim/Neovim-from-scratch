@@ -20,7 +20,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
 	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
 	dashboard.button("k", "-  Knowledgebase", ":e ~/vimwiki/Knowledgebase.md <CR>"),
-	dashboard.button("d", "-  Diary", ":e ~/vimwiki/diary <CR>"),
+	dashboard.button("d", "-  New Diary Entry", ":VimwikiMakeDiaryNote<CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 

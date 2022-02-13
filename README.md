@@ -6,7 +6,7 @@ Each video will be associated with a branch so checkout the one you are interest
 
 Make sure to remove or move your current `nvim` directory
 
-**IMPORTANT** Requires [Neovim v0.6.0](https://github.com/neovim/neovim/releases/tag/v0.6.0) or [Nightly](https://github.com/neovim/neovim/releases/tag/nightly). 
+**IMPORTANT** Requires [Neovim v0.6.1](https://github.com/neovim/neovim/releases/tag/v0.6.1) or [Nightly](https://github.com/neovim/neovim/releases/tag/nightly). 
 ```
 git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
 ```

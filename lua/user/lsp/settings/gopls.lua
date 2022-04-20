@@ -1,6 +1,7 @@
 return {
   settings = {
     cmd_env = {
+      GOPACKAGESDRIVER="./tools/bazel/gopackagesdriver.sh"
     }, 
     gopls = {
       verboseOutput = true,
@@ -11,7 +12,6 @@ return {
           "-bazel-mux"
       },
         gofumpt = true,
-        ["local"] = "github.com/muxinc/mux",
         usePlaceholders = true,
         semanticTokens = true,
         codelenses = {

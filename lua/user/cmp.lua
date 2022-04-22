@@ -119,10 +119,7 @@ cmp.setup {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-<<<<<<< HEAD
-  -- fix Neovim conflict
-=======
->>>>>>> b204a3f (fixes for Neovim 0.7)
+
   window = {
     documentation = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },

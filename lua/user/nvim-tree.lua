@@ -42,7 +42,10 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
+<<<<<<< HEAD
   -- Neovim 0.7 fix
+=======
+>>>>>>> b204a3f (fixes for Neovim 0.7)
   auto_close = false,
   open_on_tab = false,
   hijack_cursor = false,

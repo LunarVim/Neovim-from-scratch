@@ -1,5 +1,9 @@
 # Neovim from scratch
 
+Forked from chris@machine's repository below. 
+
+-----------------
+
 Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
 
 ## Try out this config

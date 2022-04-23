@@ -1,7 +1,6 @@
 return {
   settings = {
     cmd_env = {
-      GOPACKAGESDRIVER="./tools/bazel/gopackagesdriver.sh"
     }, 
     gopls = {
       verboseOutput = true,

@@ -1,4 +1,5 @@
 local opts = { noremap = true, silent = true }
+local opt = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
 
@@ -32,8 +33,10 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<A-l>", ":bnext<CR>", opts)
+keymap("n", "<A-h>", ":bprevious<CR>", opts)
+
+keymap("n", "<C-b>", "<C-v>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -67,3 +70,20 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- 插件快捷键
+local pluginKeys = {}
+
+-- treesitter 折叠
+keymap("n", "zz", ":foldclose<CR>", opt)
+keymap("n", "Z", ":foldopen<CR>", opt)
+
+-- nvim-tree
+keymap("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+keymap("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
+
+-- 列表快捷键
+
+
+-- Telescope
+keymap("n", "<C-p>", ":Telescope find_files<CR>", opt)
+keymap("n", "<C-f>", ":Telescope live_grep<CR>", opt)

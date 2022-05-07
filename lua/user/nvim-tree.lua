@@ -32,81 +32,91 @@ if not config_status_ok then
 end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
+local list_keys =  { -- 打开文件或文件夹
+  { key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
+  -- 分屏打开文件
+  { key = "v", action = "vsplit" },
+  -- 显示隐藏文件
+  { key = "h", action = "split" },
+  -- Ignore (node_modules)
+  { key = "i", action = "toggle_ignored" },
+  -- Hide (dotfiles)
+  { key = ".", action = "toggle_dotfiles" },
+  -- 文件操作
+  { key = "a", action = "create" },
+  { key = "d", action = "remove" },
+  { key = "r", action = "rename" },
+  { key = "R", action = "refresh" },
+  { key = "x", action = "cut" },
+  { key = "c", action = "copy" },
+  { key = "p", action = "paste" },
+  -- 进入下一级
+  { key = { "]" }, action = "cd" },
+  -- 进入上一级
+  { key = { "[" }, action = "dir_up" },
+  -- mac
+  { key = "s", action = "open" },
+  -- windows
+  -- { key = 's', action = 'system_open' },
+  { key = "?", action = "toggle_help" },
+}
 
 nvim_tree.setup {
+  -- 完全禁止内置netrw
   disable_netrw = true,
-  hijack_netrw = true,
-  open_on_setup = false,
-  ignore_ft_on_setup = {
-    "startify",
-    "dashboard",
-    "alpha",
+  -- 不显示 git 状态图标
+  git = {
+    enable = false,
   },
-  auto_close = true,
-  open_on_tab = false,
-  hijack_cursor = false,
+  -- project plugin 需要这样设置
   update_cwd = true,
-  update_to_buf_dir = {
-    enable = true,
-    auto_open = true,
-  },
-  diagnostics = {
-    enable = true,
-    icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
-    },
-  },
   update_focused_file = {
     enable = true,
     update_cwd = true,
-    ignore_list = {},
   },
-  system_open = {
-    cmd = nil,
-    args = {},
-  },
+  -- 隐藏 .文件 和 node_modules 文件夹
   filters = {
-    dotfiles = false,
-    custom = {},
+    dotfiles = true,
+    custom = { "node_modules" },
   },
+  view = {
+    -- 宽度
+    width = 34,
+    -- 也可以 'right'
+    side = "left",
+    -- 隐藏根目录
+    hide_root_folder = false,
+    -- 自定义列表中快捷键
+    mappings = {
+      custom_only = false,
+      list = list_keys,
+    },
+    -- 不显示行数
+    number = false,
+    relativenumber = false,
+    -- 显示图标
+    signcolumn = "yes",
+  },
+  actions = {
+    open_file = {
+      -- 首次打开大小适配
+      resize_window = true,
+      -- 打开文件时关闭 tree
+      quit_on_open = false,
+    },
+  },
+  -- wsl install -g wsl-open
+  -- https://github.com/4U6U57/wsl-open/
+  system_open = {
+    -- mac
+    cmd = "open",
+    -- windows
+    -- cmd = "wsl-open",
+  },
+  --git_hl = 1,
   git = {
     enable = true,
     ignore = true,
     timeout = 500,
-  },
-  view = {
-    width = 30,
-    height = 30,
-    hide_root_folder = false,
-    side = "left",
-    auto_resize = true,
-    mappings = {
-      custom_only = false,
-      list = {
-        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-        { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
-      },
-    },
-    number = false,
-    relativenumber = false,
-  },
-  trash = {
-    cmd = "trash",
-    require_confirm = true,
-  },
-  quit_on_open = 0,
-  git_hl = 1,
-  disable_window_picker = 0,
-  root_folder_modifier = ":t",
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
   },
 }

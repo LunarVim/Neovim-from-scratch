@@ -5,7 +5,18 @@ end
 
 local dashboard = require("alpha.themes.dashboard")
 
-vim.g.dashboard_custom_header = {
+dashboard.section.header.val = {
+  [[                                              ]],
+  [[        ██████╗ ███╗   ███╗ ██████╗           ]],
+  [[        ██╔══██╗████╗ ████║██╔═══██╗          ]],
+  [[        ██████╔╝██╔████╔██║██║   ██║          ]],
+  [[        ██╔══██╗██║╚██╔╝██║██║   ██║          ]],
+  [[        ██████╔╝██║ ╚═╝ ██║╚██████╔╝          ]],
+  [[        ╚═════╝ ╚═╝     ╚═╝ ╚═════╝           ]],
+  [[                                              ]],
+  [[             [ version : 1.0.0 ]              ]],
+}
+local default_header= {
   [[                                              ]],
   [[        ██████╗ ███╗   ███╗ ██████╗           ]],
   [[        ██╔══██╗████╗ ████║██╔═══██╗          ]],
@@ -33,7 +44,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "chrisatmachine.com"
+	return "uttp.com"
 end
 
 dashboard.section.footer.val = footer()

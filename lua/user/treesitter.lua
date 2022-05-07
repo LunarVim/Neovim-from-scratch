@@ -8,7 +8,7 @@ end
 configs.setup({
   -- 安装 language parser
   -- :TSInstallInfo 命令查看支持的语言
-  ensure_installed = { "json", "html", "css", "vim", "lua", "javascript", "typescript", "tsx" },
+  ensure_installed = {"cpp","c" ,"json", "html", "css", "vim", "lua", "javascript", "typescript", "tsx" },
   -- ensure_installed = "maintained",
 
   -- 启用代码高亮模块

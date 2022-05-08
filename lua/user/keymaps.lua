@@ -40,8 +40,8 @@ keymap("n", "<A-h>", ":bprevious<CR>", opts)
 keymap("n", "<C-b>", "<C-v>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-j>", "5j", opts)
+keymap("n", "<A-k>", "5k", opts)
 
 -- Insert --
 -- Press jk fast to enter

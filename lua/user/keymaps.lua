@@ -37,7 +37,7 @@ keymap("n", "s=", "<C-w>=", opts)
 keymap("n", "<A-l>", ":bnext<CR>", opts)
 keymap("n", "<A-h>", ":bprevious<CR>", opts)
 
-keymap("n", "<C-b>", "<C-v>", opts)
+keymap("n", "<A-b>", "<C-v>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "5j", opts)

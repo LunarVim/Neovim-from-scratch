@@ -1,6 +1,6 @@
 require "user.options"
 require "user.keymaps"
-require "user.local.keymaps"
+require "user.steveo-keymaps"
 require "user.plugins"
 require "user.colorscheme"
 require "user.cmp"

@@ -15,11 +15,6 @@ local keymap = vim.api.nvim_set_keymap
 
 -- Normal --
 
-keymap('n', 'gs', ':lua _LAZYGIT_TOGGLE()<cr>', opts)
-keymap('n', 'gh', ':lua _HTOP_TOGGLE()<cr>', opts)
-keymap('n', 'we', ':e **/', opts)
-keymap('n', 'wf', ':Telescope find_files<cr>', opts)
-
 -- Insert --
 
 -- Visual --

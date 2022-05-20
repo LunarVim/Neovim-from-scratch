@@ -44,6 +44,9 @@ keymap("n", "<A-j>", "5j", opts)
 keymap("n", "<A-k>", "5k", opts)
 keymap("n", "<A-v>", "<C-v>", opts)
 
+-- move in line
+keymap("n", "0", "^", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)

@@ -42,6 +42,7 @@ keymap("n", "<A-b>", "<C-v>", opts)
 -- Move text up and down
 keymap("n", "<A-j>", "5j", opts)
 keymap("n", "<A-k>", "5k", opts)
+keymap("n", "<A-v>", "<C-v>", opts)
 
 -- Insert --
 -- Press jk fast to enter

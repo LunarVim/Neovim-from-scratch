@@ -9,11 +9,13 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
-	debug = false,
+	debug = true,
 	sources = {
 		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-    -- diagnostics.flake8
+    diagnostics.golangci_lint.with({"run", "--fix=true", "--fast", "--out-format=json", "$DIRNAME", "--path-prefix", "$ROOT"}),
+   	diagnostics.flake8,
+    diagnostics.hadolint.with({ "--no-fail", "--format=json", "-" })
 	},
 })

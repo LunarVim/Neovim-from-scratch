@@ -7,7 +7,8 @@ local actions = require "telescope.actions"
 
 telescope.setup {
   defaults = {
-
+    -- file ignore patterns makes search really slow :(
+    -- file_ignore_patterns = {"*.pyc"},
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },

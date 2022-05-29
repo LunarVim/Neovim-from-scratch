@@ -35,8 +35,10 @@ vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 
-vim.opt.shortmess:append "c"
+-- vim.opt.shortmess:append "c"                    -- Don't give "|ins-completion-menu|" messages.
+vim.opt.shortmess:append "I"                    -- Set No Intro-message for Neo-vim.
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+-- vim.cmd Passes strings, that will be interpreted as vim-script.
+-- vim.cmd "set whichwrap+=<,>,[,],h,l"
+vim.cmd [[set iskeyword+=-]] -- Will treat words with a dash as part of a single word.
+--vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work

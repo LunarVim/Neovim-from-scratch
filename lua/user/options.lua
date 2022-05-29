@@ -25,6 +25,7 @@ vim.opt.expandtab = true                        -- convert tabs to spaces
 vim.opt.shiftwidth = 2                          -- the number of spaces inserted for each indentation
 vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
 vim.opt.cursorline = true                       -- highlight the current line
+vim.opt.cursorcolumn = true                     -- Enable a vertical column, that makes a code cross-hair on the current column.
 vim.opt.number = true                           -- set numbered lines
 vim.opt.relativenumber = true                   -- set relative numbered lines
 vim.opt.numberwidth = 4                         -- set number column width to 2 {default 4}

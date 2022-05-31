@@ -1,50 +1,49 @@
 -- :help options
 local options = {
-  backup = true,                           -- Creates a backup file, before edits are written.
-  clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
-  cmdheight = 2,                           -- more space in the neovim command line for displaying messages
-  completeopt = { "menuone", "noselect" }, -- mostly just for cmp
-  conceallevel = 0,                        -- so that `` is visible in markdown files
-  fileencoding = "utf-8",                  -- the encoding written to a file
-  hlsearch = true,                         -- highlight all matches on previous search pattern
-  incsearch = true,                        -- Turn on incremental search highlighting.
-  ignorecase = true,                       -- ignore case in search patterns
-  mouse = "a",                             -- allow the mouse to be used in neovim
-  pumheight = 10,                          -- pop up menu height
-  showtabline = 2,                         -- always show tabs
-  smartcase = true,                        -- smart case
-  smartindent = true,                      -- make indenting smarter again
-  splitbelow = true,                       -- force all horizontal splits to go below current window
-  splitright = true,                       -- force all vertical splits to go to the right of current window
-  swapfile = false,                        -- creates a swapfile
-  termguicolors = true,                    -- set term gui colors (most terminals support this)
-  timeoutlen = 1000,                       -- time to wait for a mapped sequence to complete (in milliseconds)
-  undofile = true,                         -- enable persistent undo
-  updatetime = 300,                        -- faster completion (4000ms default)
-  writebackup = true,                      -- Write a backup file, before saving.
-  expandtab = true,                        -- convert tabs to spaces
-  shiftwidth = 4,                          -- the number of spaces inserted for each indentation
-  tabstop = 4,                             -- insert 2 spaces for a tab
-  cursorline = true,                       -- highlight the current line
-  cursorcolumn = true,                     -- Enable a vertical column, that makes a code cross-hair on the current column.
-  number = true,                           -- set numbered lines
-  relativenumber = true,                   -- set relative numbered lines
-  numberwidth = 4,                         -- set number column width to 2 {default 4}
-  signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
-  wrap = true,                             -- Wrap my code-lines on the visible screen.
-  scrolloff = 8,                           -- is one of my fav
-  sidescrolloff = 8,
-  guifont = "monospace:h17",               -- the font used in graphical neovim applications
+  backup = true,                                       -- Creates a backup file, before edits are written.
+  clipboard = "unnamedplus",                           -- Allows neovim to access the system clipboard.
+  cmdheight = 2,                                       -- More space in the neovim command line, for displaying messages.
+  completeopt = { "menuone", "noselect" },             -- Mostly just for cmp.
+  conceallevel = 0,                                    -- Added so `` is visible in markdown files.
+  fileencoding = "utf-8",                              -- The encoding written to a file.
+  hlsearch = true,                                     -- Highlight all matches on when searching.
+  incsearch = true,                                    -- Turn on incremental search highlighting.
+  ignorecase = true,                                   -- Ignore case in search patterns.
+  mouse = "a",                                         -- Allow the mouse to be used in neovim.
+  pumheight = 10,                                      -- Pop up menu height.
+  showtabline = 2,                                     -- Always show tabs.
+  smartcase = false,                                   -- Overides ignore case, w/ capitals. Default = false.
+  smartindent = true,                                  -- Keep indention from line-to-line.
+  splitbelow = true,                                   -- Force all horizontal splits, to go below current window.
+  splitright = true,                                   -- Force all vertical splits, to go to the right of current window.
+  swapfile = false,                                    -- Creates a swapfile.
+  termguicolors = true,                                -- Set terminal GUI colors.
+  timeoutlen = 1000,                                   -- Time to wait, for a mapped sequence to complete(in milliseconds).
+  undofile = true,                                     -- Enable persistent undo.
+  undodir = "~/.config/nvim/persistant_undo_history",  -- Sets the directory to store persistant-undo saves.
+  updatetime = 300,                                    -- Faster completion(4000ms default).
+  writebackup = true,                                  -- Write a backup file, before saving.
+  expandtab = true,                                    -- Convert tabs into spaces.
+  shiftwidth = 4,                                      -- The number of spaces inserted for each indentation
+  tabstop = 4,                                         -- Insert 2 spaces for each tab.
+  cursorline = true,                                   -- Highlight the current line.
+  cursorcolumn = true,                                 -- Enable a vertical column, that makes a code cross-hair on the current position.
+  number = true,                                       -- Set numbered lines.
+  relativenumber = true,                               -- Set relative numbered lines.
+  numberwidth = 4,                                     -- set number line column width to 4(default 4).
+  signcolumn = "yes",                                  -- Always show the sign column, or it would shift the text each time.
+  wrap = true,                                         -- Wrap my code-lines on the visible screen.
+  guifont = "monospace:h17",                           -- The font used in graphical neovim applications.
 }
-
--- Did NOT fit well within the options loop above, without throwing errors and disabling the loop.
-  vim.opt.shortmess:append "I"                    -- Set No Intro-message for Neo-vim.
 
 -- A lua for-loop to loop through the above table of options.
 -- A table is a list, that is allowed key, value pairs.
   for k, v in pairs(options) do
     vim.opt[k] = v
   end
+
+-- Did NOT fit well within the options loop above, without throwing errors and disabling the loop.
+  vim.opt.shortmess:append "I"                    -- Set No Intro-message for Neo-vim.
 
 --###########################################################
 --# The line below will update:                             #

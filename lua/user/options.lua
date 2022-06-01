@@ -58,15 +58,3 @@ local options = {
 -- vim.cmd "set whichwrap+=<,>,[,],h,l" Want to find out what it does, before blindly enabling it.
   vim.cmd [[set iskeyword+=-]] -- Will treat words with a dash as part of a single word.
 --vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
-
--- Embedded Vim Auto-command, that adds file cursor location persistance.
-vim.cmd
-[[
-    augroup line_return
-        au!
-        au BufReadPost *
-            \ if line("'\"") > 0 && line("'\"") <= line("$") |
-            \     execute 'normal! g`"zvzz' |
-            \ endif
-    augroup END
-]]

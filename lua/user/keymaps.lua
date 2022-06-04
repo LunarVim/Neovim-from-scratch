@@ -97,6 +97,11 @@ keymap("i", "jk", "<ESC>", opts)
 -- "##########################################################################
   keymap("n", "<leader>nl", ":set nolist<CR>", opts)
 
+-- "##############################################################################
+-- "# cm == copy-mode. disables special characters($) and relative-line-numbers. #
+-- "##############################################################################
+  keymap("n", "<leader>cm", ":set nolist <CR> <bar> :set nornu <CR> <bar> :set nonu <CR> <bar> :set paste <CR>", opts)
+
 -- Terminal --
 -- Better terminal navigation... ???
 -- This is the ONLY block I am not sure if I want to include in my config,

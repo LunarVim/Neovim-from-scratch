@@ -81,26 +81,29 @@ keymap("i", "jk", "<ESC>", opts)
 -- "################################################################
   keymap("n", "<leader>nh", ":nohl<CR>", opts)
 
+-- "#########################################################
+-- "# Map nn, to toggle regular line-numberings on,          #
+-- "# to check for which specific line of the file your on. #
+-- "#########################################################
+  keymap("n", "<leader>lno", ":set nonu<CR>", opts) -- Turn line-numbers OFF.
+  keymap("n", "<leader>ln", ":set nu<CR>", opts)    -- Turn line-numbers back on.
+
 -- "##################################################################
 -- "# Map nr to toggle off the relative line numbers in Normal mode. #
 -- "##################################################################
-  keymap("n", "<leader>nr", ":set nornu<CR>", opts)
-
--- "#########################################################
--- "# Map n, to toggle regular line-numberings on,          #
--- "# to check for which specific line of the file your on. #
--- "#########################################################
-  keymap("n", "<leader>nn", ":set nonu<CR>", opts)
+  keymap("n", "<leader>nno", ":set nornu<CR>", opts) -- Turn relative line-numbers OFF.
+  keymap("n", "<leader>rn", ":set rnu<CR>", opts)  -- Turn relative line-numbers back on.
 
 -- "##########################################################################
 -- "#I'm mapping comma{,} + lower-case 'l' to disable special char listings. #
 -- "##########################################################################
-  keymap("n", "<leader>nl", ":set nolist<CR>", opts)
+  keymap("n", "<leader>nls", ":set nolist<CR>", opts) -- Turn special hidden chars OFF.
+  keymap("n", "<leader>ls", ":set list<CR>", opts)    -- Turn List(ls) mode back on.
 
 -- "##############################################################################
 -- "# cm == copy-mode. disables special characters($) and relative-line-numbers. #
 -- "##############################################################################
-  keymap("n", "<leader>cm", ":set nolist <CR> <bar> :set nornu <CR> <bar> :set nonu <CR>", opts)
+ keymap("n", "<leader>cm", ":set nolist <CR> <bar> :set nornu <CR> <bar> :set nonu <CR>", opts)
 
 -- "#################################################
 -- "# I'm mapping vc to reload the .vimrc,          #

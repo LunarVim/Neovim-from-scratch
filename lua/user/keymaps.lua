@@ -1,4 +1,6 @@
-local opts = { noremap = true, silent = true }
+-- changed silent to false, b/c for now I have the space for it,
+-- and prefer verbosity!
+local opts = { noremap = true, silent = false }
 
 -- Terminal options for.
 local term_opts = { silent = true }
@@ -67,6 +69,11 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+--"############################
+--"# leader-mappings section: #
+--"############################
+  keymap( "n", "<leader>top", ":set paste<CR>", opts)  -- Turn special pasting on ONLY when needed.
 
 -- Terminal --
 -- Better terminal navigation... ???

@@ -105,18 +105,27 @@ keymap("i", "jk", "<ESC>", opts)
 -- "##############################################################################
  keymap("n", "<leader>cm", ":set nolist <CR> <bar> :set nornu <CR> <bar> :set nonu <CR>", opts)
 
+-- "#############################################################
+-- "# Spell check set to sc(Spell-Check)/es(Switch 2 ESpañol.). #
+-- "#############################################################
+  keymap("n", "<leader>sc", ":setlocal spell! spelllang=en_us<CR>", opts)
+  keymap("n", "<leader>es", ":set spelllang=es<CR>", opts)
+
+-- "########################################################################
+-- "# hotkey mappings for jumps, marks, buffer-LiSting, and changes lists. #
+-- "########################################################################
+  keymap("n", "<leader>mm", ":marks<CR>", opts)     -- This will open up the Marks-list.
+  keymap("n", "<leader>jj", ":jumps<CR>", opts)     -- This will open up the Jumps-list.
+  keymap("n", "<leader>ll", ":ls<CR>", opts)        -- This opens up the buffers-list.
+  keymap("n", "<leader>cc", ":changes<CR>", opts)   -- This will open up the Changes-list.
+  keymap("n", "<leader>rr", ":registers<Cr>", opts) -- This will open up the Registers-list.
+
 -- "#################################################
 -- "# I'm mapping vc to reload the .vimrc,          #
 -- "# without closing and re-opening he vim config. #
 -- "#################################################
 -- keymap("n", "<leader>vc", ":source ~/.config/nvim/init.lua<CR> <bar> :nohl <CR>", opts)
 -- TODO attempt to put this in vim.cmd later.
-
--- "#############################################################
--- "# Spell check set to sc(Spell-Check)/es(Switch 2 ESpañol.). #
--- "#############################################################
-  keymap("n", "<leader>sc", ":setlocal spell! spelllang=en_us<CR>", opts)
-  keymap("n", "<leader>es", ":set spelllang=es<CR>", opts)
 
 -- Terminal --
 -- Better terminal navigation... ???

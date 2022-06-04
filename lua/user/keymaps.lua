@@ -120,6 +120,18 @@ keymap("i", "jk", "<ESC>", opts)
   keymap("n", "<leader>cc", ":changes<CR>", opts)   -- This will open up the Changes-list.
   keymap("n", "<leader>rr", ":registers<Cr>", opts) -- This will open up the Registers-list.
 
+-- "########################################################################
+-- "# Adding some hotkeys to more easily deal with splits.                 #
+-- "# qq == :q aka quit file. You will be prompted if the file is unsaved. #
+-- "# wq == :wq aka Save and quit.                                         #
+-- "# qa == :qa! aka quit the file without saving                          #
+-- "# w == :w <ENTER> aka save(write) file.                                #
+-- "########################################################################
+  keymap("n", "<leader>qq", ":q<CR>", opts)
+  keymap("n", "<leader>wq", ":wq<CR>", opts)
+  keymap("n", "<leader>qa", ":qa!<CR>", opts)
+  keymap("n", "<leader>s", ":w<CR>", opts)
+
 -- "#################################################
 -- "# I'm mapping vc to reload the .vimrc,          #
 -- "# without closing and re-opening he vim config. #

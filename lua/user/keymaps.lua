@@ -100,13 +100,20 @@ keymap("i", "jk", "<ESC>", opts)
 -- "##############################################################################
 -- "# cm == copy-mode. disables special characters($) and relative-line-numbers. #
 -- "##############################################################################
-  keymap("n", "<leader>cm", ":set nolist <CR> <bar> :set nornu <CR> <bar> :set nonu <CR> <bar> :set paste <CR>", opts)
+  keymap("n", "<leader>cm", ":set nolist <CR> <bar> :set nornu <CR> <bar> :set nonu <CR>", opts)
 
 -- "#################################################
 -- "# I'm mapping vc to reload the .vimrc,          #
 -- "# without closing and re-opening he vim config. #
 -- "#################################################
-  keymap("n", "<leader>vc", ":source ~/.config/nvim/init.lua<CR> <bar> :nohl <CR>", opts)
+-- keymap("n", "<leader>vc", ":source ~/.config/nvim/init.lua<CR> <bar> :nohl <CR>", opts)
+-- TODO attempt to put this in vim.cmd later.
+
+-- "#############################################################
+-- "# Spell check set to sc(Spell-Check)/es(Switch 2 ESpañol.). #
+-- "#############################################################
+  keymap("n", "<leader>sc", ":setlocal spell! spelllang=en_us<CR>", opts)
+  keymap("n", "<leader>es", ":set spelllang=es<CR>", opts)
 
 -- Terminal --
 -- Better terminal navigation... ???

@@ -5,7 +5,30 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua" }
+-- lspconfig.ccls.setup {
+--   handlers = {
+--     ["textDocument/publishDiagnostics"] = vim.lsp.with(
+--     vim.lsp.diagnostic.on_publish_diagnostics, {
+--       -- Disable virtual_text on file load
+--       -- Show with vim.lsp.diagnostic.show_line_diagnostics()
+--       virtual_text = false,
+--       underline = true,
+--       signs = true
+--     }
+--     ),
+--   },
+--   init_options = {
+--     compilationDatabaseDirectory = "build";
+--     index = {
+--       threads = 0;
+--     };
+--     clang = {
+--       excludeArgs = { "-frounding-math"} ;
+--     };
+--   }
+-- }
+
+local servers = { "jsonls", "sumneko_lua", "sorbet", "ccls" }
 
 lsp_installer.setup {
 	ensure_installed = servers

@@ -19,3 +19,14 @@ require "user.indentline"
 require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
+-- require "user.easymotion"
+
+-- NOTE
+-- hover K (xxx def)
+--- error info gl -> detail
+-- gd go to
+-- gr on word search where has that string or Telescope: lsp_reference
+-- Telescope ... theme=dropdown|ivy|cursor
+--<leader>f Telescope find_files...
+-- cmp-xx has extensions
+-- TSPHIGHT...

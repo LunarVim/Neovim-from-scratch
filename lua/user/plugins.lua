@@ -58,6 +58,7 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
+  use "p00f/nvim-ts-rainbow"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -89,10 +90,15 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use 'nvim-treesitter/playground'
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+
+  -- use "easymotion/vim-easymotion"
+  use { 'michaelb/sniprun', run = 'bash ./install.sh' }
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

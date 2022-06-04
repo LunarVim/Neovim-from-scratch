@@ -139,7 +139,7 @@ keymap("i", "jk", "<ESC>", opts)
 -- #################
 -- # TAB keymaps:  #
 -- #################
-  keymap("n", "<leader>tn", ":tabnew ", opts)    -- New-tab
+  keymap("n", "<leader>tn", ":tabnew ", opts)       -- New-tab
   keymap("n", "<leader>bt", "gT", opts)             -- Backward-tab(s)
   keymap("n", "<leader>ft", "gt", opts)             -- Forward-tab(s)
   keymap("n", "<leader>tc", ":tabclose<CR>", opts)  -- Close-tab
@@ -156,13 +156,6 @@ keymap("i", "jk", "<ESC>", opts)
 -- ###############################################################################
   keymap("n", "<leader>sp", ":split<CR>", opts)     -- Splits current view horizontally.
   keymap("n", "<leader>vp", ":vsplit<CR>", opts)    -- Splits current view Vertically. 
-
--- ##################################################
--- ## I'm mapping vc to reload the .vimrc,          #
--- ## without closing and re-opening he vim config. #
--- ##################################################
--- keymap("n", "<leader>vc", ":source ~/.config/nvim/init.lua<CR> <bar> :nohl <CR>", opts)
--- TODO attempt to put this in vim.cmd later.
 
 -- Terminal --
 -- Better terminal navigation... ???

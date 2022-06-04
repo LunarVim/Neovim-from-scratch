@@ -75,6 +75,12 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 --"############################
   keymap( "n", "<leader>top", ":set paste<CR>", opts)  -- Turn special pasting on ONLY when needed.
 
+--"################################################################
+--"# Toggle highlight searching.                                  #
+--"# Map nh to toggle off the search highlighting in Normal mode. #
+--"################################################################
+  keymap( "n", "<leader>nh", ":nohl<CR>", opts)
+
 -- Terminal --
 -- Better terminal navigation... ???
 -- This is the ONLY block I am not sure if I want to include in my config,

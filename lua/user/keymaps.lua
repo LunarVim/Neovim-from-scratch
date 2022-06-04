@@ -81,61 +81,86 @@ keymap("i", "jk", "<ESC>", opts)
 -- "################################################################
   keymap("n", "<leader>nh", ":nohl<CR>", opts)
 
--- "#########################################################
--- "# Map nn, to toggle regular line-numberings on,          #
--- "# to check for which specific line of the file your on. #
--- "#########################################################
+-- ##########################################################
+-- ## Map nn, to toggle regular line-numberings on,          #
+-- ## to check for which specific line of the file your on. #
+-- ##########################################################
   keymap("n", "<leader>lno", ":set nonu<CR>", opts) -- Turn line-numbers OFF.
   keymap("n", "<leader>ln", ":set nu<CR>", opts)    -- Turn line-numbers back on.
 
--- "##################################################################
--- "# Map nr to toggle off the relative line numbers in Normal mode. #
--- "##################################################################
+-- ###################################################################
+-- ## Map nr to toggle off the relative line numbers in Normal mode. #
+-- ###################################################################
   keymap("n", "<leader>nno", ":set nornu<CR>", opts) -- Turn relative line-numbers OFF.
   keymap("n", "<leader>rn", ":set rnu<CR>", opts)  -- Turn relative line-numbers back on.
 
--- "##########################################################################
--- "#I'm mapping comma{,} + lower-case 'l' to disable special char listings. #
--- "##########################################################################
+-- ###########################################################################
+-- ##I'm mapping comma{,} + lower-case 'l' to disable special char listings. #
+-- ###########################################################################
   keymap("n", "<leader>nls", ":set nolist<CR>", opts) -- Turn special hidden chars OFF.
   keymap("n", "<leader>ls", ":set list<CR>", opts)    -- Turn List(ls) mode back on.
 
--- "##############################################################################
--- "# cm == copy-mode. disables special characters($) and relative-line-numbers. #
--- "##############################################################################
+-- ###############################################################################
+-- ## cm == copy-mode. disables special characters($) and relative-line-numbers. #
+-- ###############################################################################
  keymap("n", "<leader>cm", ":set nolist <CR> <bar> :set nornu <CR> <bar> :set nonu <CR>", opts)
 
--- "#############################################################
--- "# Spell check set to sc(Spell-Check)/es(Switch 2 ESpañol.). #
--- "#############################################################
+-- ##############################################################
+-- ## Spell check set to sc(Spell-Check)/es(Switch 2 ESpañol.). #
+-- ##############################################################
   keymap("n", "<leader>sc", ":setlocal spell! spelllang=en_us<CR>", opts)
   keymap("n", "<leader>es", ":set spelllang=es<CR>", opts)
 
--- "########################################################################
--- "# hotkey mappings for jumps, marks, buffer-LiSting, and changes lists. #
--- "########################################################################
+-- #########################################################################
+-- ## hotkey mappings for jumps, marks, buffer-LiSting, and changes lists. #
+-- #########################################################################
   keymap("n", "<leader>mm", ":marks<CR>", opts)     -- This will open up the Marks-list.
   keymap("n", "<leader>jj", ":jumps<CR>", opts)     -- This will open up the Jumps-list.
   keymap("n", "<leader>ll", ":ls<CR>", opts)        -- This opens up the buffers-list.
   keymap("n", "<leader>cc", ":changes<CR>", opts)   -- This will open up the Changes-list.
   keymap("n", "<leader>rr", ":registers<Cr>", opts) -- This will open up the Registers-list.
 
--- "########################################################################
--- "# Adding some hotkeys to more easily deal with splits.                 #
--- "# qq == :q aka quit file. You will be prompted if the file is unsaved. #
--- "# wq == :wq aka Save and quit.                                         #
--- "# qa == :qa! aka quit the file without saving                          #
--- "# w == :w <ENTER> aka save(write) file.                                #
--- "########################################################################
+-- #########################################################################
+-- ## Adding some hotkeys to more easily deal with splits.                 #
+-- ## qq == :q aka quit file. You will be prompted if the file is unsaved. #
+-- ## wq == :wq aka Save and quit.                                         #
+-- ## qa == :qa! aka quit the file without saving                          #
+-- ## w == :w <ENTER> aka save(write) file.                                #
+-- #########################################################################
   keymap("n", "<leader>qq", ":q<CR>", opts)
   keymap("n", "<leader>wq", ":wq<CR>", opts)
   keymap("n", "<leader>qa", ":qa!<CR>", opts)
   keymap("n", "<leader>s", ":w<CR>", opts)
 
--- "#################################################
--- "# I'm mapping vc to reload the .vimrc,          #
--- "# without closing and re-opening he vim config. #
--- "#################################################
+-- ##################
+-- ## Mark-keymaps: #
+-- ##################
+  keymap("n", "<leader>dm", ":delmarks!<CR>", opts)     -- Delete ALL marks:
+-- #################
+-- # TAB keymaps:  #
+-- #################
+  keymap("n", "<leader>tn", ":tabnew", opts)    -- New-tab
+  keymap("n", "<leader>bt", "gT", opts)             -- Backward-tab(s)
+  keymap("n", "<leader>ft", "gt", opts)             -- Forward-tab(s)
+  keymap("n", "<leader>tc", ":tabclose<CR>", opts)  -- Close-tab
+  keymap("n", "<leader>db", ":bd<CR>", opts)        -- Delete-Buffer
+
+-- ###############################################################################
+-- # Split-keymaps:                                                              #
+-- #The following combos split the view, and it is up to you to switch to        #
+-- #different files or locations in a large file perhaps.                        #
+-- #*~In a powershell or cmd prompt, there is possibly no session or             #
+-- #tmux|screen|byobu or jobs like functionality I've been able to find.         #
+-- #Although clink 4 cmd does have history/jab-control, but sadly no shell-view  #
+-- #multi-plexing. :(                                                            #
+-- ###############################################################################
+  keymap("n", "<leader>sp", ":split<CR>", opts)     -- Splits current view horizontally.
+  keymap("n", "<leader>vp", ":vsplit<CR>", opts)    -- Splits current view Vertically. 
+
+-- ##################################################
+-- ## I'm mapping vc to reload the .vimrc,          #
+-- ## without closing and re-opening he vim config. #
+-- ##################################################
 -- keymap("n", "<leader>vc", ":source ~/.config/nvim/init.lua<CR> <bar> :nohl <CR>", opts)
 -- TODO attempt to put this in vim.cmd later.
 

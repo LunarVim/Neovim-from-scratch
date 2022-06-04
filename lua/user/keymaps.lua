@@ -139,7 +139,7 @@ keymap("i", "jk", "<ESC>", opts)
 -- #################
 -- # TAB keymaps:  #
 -- #################
-  keymap("n", "<leader>tn", ":tabnew", opts)    -- New-tab
+  keymap("n", "<leader>tn", ":tabnew ", opts)    -- New-tab
   keymap("n", "<leader>bt", "gT", opts)             -- Backward-tab(s)
   keymap("n", "<leader>ft", "gt", opts)             -- Forward-tab(s)
   keymap("n", "<leader>tc", ":tabclose<CR>", opts)  -- Close-tab

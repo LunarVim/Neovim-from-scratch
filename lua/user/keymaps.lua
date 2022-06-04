@@ -102,6 +102,12 @@ keymap("i", "jk", "<ESC>", opts)
 -- "##############################################################################
   keymap("n", "<leader>cm", ":set nolist <CR> <bar> :set nornu <CR> <bar> :set nonu <CR> <bar> :set paste <CR>", opts)
 
+-- "#################################################
+-- "# I'm mapping vc to reload the .vimrc,          #
+-- "# without closing and re-opening he vim config. #
+-- "#################################################
+  keymap("n", "<leader>vc", ":source ~/.config/nvim/init.lua<CR> <bar> :nohl <CR>", opts)
+
 -- Terminal --
 -- Better terminal navigation... ???
 -- This is the ONLY block I am not sure if I want to include in my config,

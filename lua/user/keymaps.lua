@@ -1,50 +1,50 @@
 -- changed silent to false, b/c for now I have the space for it,
 -- and prefer verbosity!
-local opts = { noremap = true, silent = false }
+  local opts = { noremap = true, silent = false }
 
 -- Terminal options for.
-local term_opts = { silent = true }
+  local term_opts = { silent = true }
 
 -- Shorten function name.
-local keymap = vim.api.nvim_set_keymap
+  local keymap = vim.api.nvim_set_keymap
 
 --Re-map space as leader key.
 --I already did this on vim & neovim(init.vim).
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+  keymap("", "<Space>", "<Nop>", opts)
+  vim.g.mapleader = " "
+  vim.g.maplocalleader = " "
 
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
+-- Modes:
+--  normal_mode = "n",
+--  insert_mode = "i",
+--  visual_mode = "v",
+--  visual_block_mode = "x",
+--  term_mode = "t",
+--  command_mode = "c",
 
 -- Normal --
 -- Better window navigation
 -- Exactly what I would have done...
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+  keymap("n", "<C-h>", "<C-w>h", opts)
+  keymap("n", "<C-j>", "<C-w>j", opts)
+  keymap("n", "<C-k>", "<C-w>k", opts)
+  keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Toggle NetRW Plugin for now...
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+  keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- Resize with with Ctrl-Up/Down/Left/Right.
 -- Tweaked slightly like on the Video-series.
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
+  keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+  keymap("n", "<C-Down>", ":resize -2<CR>", opts)
+  keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
+  keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
 -- Navigate buffers.
 -- I like changing buffers this way,
 -- b/c I was running into problems w/ Ctrl-f/b.
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+  keymap("n", "<S-l>", ":bnext<CR>", opts)
+  keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter Normal-mode, from Insert-mode.
@@ -53,33 +53,49 @@ keymap("i", "jk", "<ESC>", opts)
 -- Visual --
 -- Stay in indent mode.
 -- I like this idea.
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+  keymap("v", "<", "<gv", opts)
+  keymap("v", ">", ">gv", opts)
 
 -- Move text highlights up & down.
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+  keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+  keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+  keymap("v", "p", '"_dP', opts)
 -- Subltle change, but if you paste over a visual selection;
 -- Now it won't put what you pasted over into the 2-be-pasted-next buffer. 
 
 -- Visual Block --
 -- Move full lines Up/Down.
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+  keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+  keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+  keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+  keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
---"############################
---"# leader-mappings section: #
---"############################
-  keymap( "n", "<leader>top", ":set paste<CR>", opts)  -- Turn special pasting on ONLY when needed.
+-- "############################
+-- "# leader-mappings section: #
+-- "############################
+  keymap("n", "<leader>top", ":set paste<CR>", opts)  -- Turn special pasting on ONLY when needed.
 
---"################################################################
---"# Toggle highlight searching.                                  #
---"# Map nh to toggle off the search highlighting in Normal mode. #
---"################################################################
-  keymap( "n", "<leader>nh", ":nohl<CR>", opts)
+-- "################################################################
+-- "# Toggle highlight searching.                                  #
+-- "# Map nh to toggle off the search highlighting in Normal mode. #
+-- "################################################################
+  keymap("n", "<leader>nh", ":nohl<CR>", opts)
+
+-- "##################################################################
+-- "# Map nr to toggle off the relative line numbers in Normal mode. #
+-- "##################################################################
+  keymap("n", "<leader>nr", ":set nornu<CR>", opts)
+
+-- "#########################################################
+-- "# Map n, to toggle regular line-numberings on,          #
+-- "# to check for which specific line of the file your on. #
+-- "#########################################################
+  keymap("n", "<leader>nn", ":set nonu<CR>", opts)
+
+-- "##########################################################################
+-- "#I'm mapping comma{,} + lower-case 'l' to disable special char listings. #
+-- "##########################################################################
+  keymap("n", "<leader>nl", ":set nolist<CR>", opts)
 
 -- Terminal --
 -- Better terminal navigation... ???

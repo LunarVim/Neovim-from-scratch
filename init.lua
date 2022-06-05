@@ -19,6 +19,7 @@ require "user.indentline"
 require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
+require "user.telescope-fzf-native"
 -- require "user.easymotion"
 
 -- NOTE
@@ -63,3 +64,7 @@ require "user.autocommands"
 --toggle term
 -- <c-\>
 -- :lua _LAZYGIT_TOGGLE()
+
+--KEYBOARD
+--no bend thumb to click ctrl
+--thumb only click two key in ergodox for now actually. to design a new one, we need to aware that.

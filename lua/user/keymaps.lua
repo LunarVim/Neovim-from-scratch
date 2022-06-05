@@ -71,5 +71,5 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "gp", "`[v`]", opts)
 
 -- add extra space by k or j
-keymap("n", "<space>k", "ko<esc>j", opts)
+keymap("n", "<space>k", "O<esc>j", opts)
 keymap("n", "<space>j", "jo<esc>k", opts)

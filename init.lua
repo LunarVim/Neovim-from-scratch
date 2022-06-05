@@ -72,3 +72,10 @@ require "user.vim-test"
 --thumb only click two key in ergodox for now actually. to design a new one, we need to aware that.
 -- but I use for {}() ergodox another layer
 -- ctrl-p for history search
+
+-- use 'tpope/vim-surround'
+-- (surround above and below) <visual-mode>+gS 
+-- (surround inline) <visual-mode>+S 
+-- cs<original surround or single char text-obj><new_surround_char> 
+-- ds<add-char> 
+-- arround ys<text-object><add-char>

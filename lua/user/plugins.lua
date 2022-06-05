@@ -113,6 +113,13 @@ return packer.startup(function(use)
   use {
     'vim-test/vim-test'
   }
+  use 'tpope/vim-surround'
+  -- (surround above and below) <visual-mode>+gS 
+  -- (surround inline) <visual-mode>+S 
+  -- cs<original surround or single char text-obj><new_surround_char> 
+  -- ds<add-char> 
+  -- arround ys<text-object><add-char>
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

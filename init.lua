@@ -20,8 +20,9 @@ require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
 require "user.telescope-fzf-native"
+require "user.vim-test"
+-- require "user.hop"
 -- require "phaazon/hop.nvim"
--- require "user.easymotion"
 
 -- NOTE
 -- hover K (xxx def)

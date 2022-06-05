@@ -67,3 +67,9 @@ keymap("v", "p", '"_dP', opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- select pasted text
+keymap("n", "gp", "`[v`]", opts)
+
+-- add extra space by k or j
+keymap("n", "<space>k", "ko<esc>j", opts)
+keymap("n", "<space>j", "jo<esc>k", opts)

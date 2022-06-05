@@ -20,6 +20,7 @@ require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
 require "user.telescope-fzf-native"
+-- require "phaazon/hop.nvim"
 -- require "user.easymotion"
 
 -- NOTE
@@ -68,3 +69,5 @@ require "user.telescope-fzf-native"
 --KEYBOARD
 --no bend thumb to click ctrl
 --thumb only click two key in ergodox for now actually. to design a new one, we need to aware that.
+-- but I use for {}() ergodox another layer
+-- ctrl-p for history search

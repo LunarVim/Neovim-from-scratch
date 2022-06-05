@@ -100,6 +100,22 @@ return packer.startup(function(use)
   -- use "easymotion/vim-easymotion"
   use { 'michaelb/sniprun', run = 'bash ./install.sh' }
 
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v1', -- optional but strongly recommended
+    -- config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+    --   require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    -- end
+  }
+
+  use {
+    'vim-test/vim-test'
+  }
+  local opts = {noremap = true}
+  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>d', ":w<CR> :TestNearest -strategy=vtr<CR>", opts)
+
+  use { 'christoomey/vim-tmux-runner' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

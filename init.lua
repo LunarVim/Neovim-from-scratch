@@ -30,3 +30,36 @@ require "user.autocommands"
 --<leader>f Telescope find_files...
 -- cmp-xx has extensions
 -- TSPHIGHT...
+
+-- ensure_installed = "all" -> need to install treesitter to make it work
+-- sorbet is not working
+
+-- check doc
+-- use :lua vim.lsp... to execute command, use tab to autocomplete
+-- use :help vim.lsp... to check doc/ or check github repor doc/
+
+--- nvim-autopair <M+e>
+
+-- comment
+-- comment.nvim
+-- nvim-ts-context-commentstring
+-- gc
+
+
+-- gitsigns
+
+-- explorer a r d
+-- TODO go, click with remaining explorer
+
+-- Bufferline
+-- sift + H or L to switch buffer
+-- BufferlinePick !! switch by char
+-- buffer is not tab, tab has many windows, a wiondow hold a buffer
+
+-- null-ls.vim
+-- :lua vim.lsp.buf.formatting_sync()
+-- :NullLsInfo
+
+--toggle term
+-- <c-\>
+-- :lua _LAZYGIT_TOGGLE()

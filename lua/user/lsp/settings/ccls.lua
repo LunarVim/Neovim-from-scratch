@@ -1,4 +1,5 @@
 return {
+  autostart = true,
   init_options = {
     compilationDatabaseDirectory = "build";
     index = {
@@ -9,4 +10,3 @@ return {
     };
   }
 }
-

@@ -81,6 +81,8 @@ end
 M.on_attach = function(client, bufnr)
 -- vim.notify(client.name .. " starting...")
 -- TODO: refactor this into a method that checks if string in list
+  print(string.format("Attached to %s", client.name))
+
   if client.name == "tsserver" then
     client.resolved_capabilities.document_formatting = false
   end

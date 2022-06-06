@@ -122,6 +122,15 @@ return packer.startup(function(use)
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
+
+  use 'tpope/vim-rails'
+  use 'RRethy/nvim-treesitter-endwise'
+  require('nvim-treesitter.configs').setup {
+    endwise = {
+      enable = true,
+    },
+  }
+  -- use 'ThePrimeagen/refactoring.nvim' -- TODO TOTRY
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

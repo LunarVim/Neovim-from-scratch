@@ -72,10 +72,23 @@ require "user.vim-test"
 --thumb only click two key in ergodox for now actually. to design a new one, we need to aware that.
 -- but I use for {}() ergodox another layer
 -- ctrl-p for history search
+-- ctro-o-p for jump between history buffers
+-- for changing MACOS space
 
 -- use 'tpope/vim-surround'
--- (surround above and below) <visual-mode>+gS 
--- (surround inline) <visual-mode>+S 
--- cs<original surround or single char text-obj><new_surround_char> 
--- ds<add-char> 
+-- (surround above and below) <visual-mode>+gS
+-- (surround inline) <visual-mode>+S
+-- cs<original surround or single char text-obj><new_surround_char>
+-- ds<add-char>
 -- arround ys<text-object><add-char>
+
+-- lazygit
+-- A commit current staged files to specific commit
+-- e v cherry-pick
+-- S squash above commits
+-- F fixup (will auto squash if then running `git rebase -i --autosquash`)
+-- p pull P push o create pull request O create pr with option
+-- t revert
+-- S stash
+
+-- cmp autocomplete press enter will select the first one but I might not want that.

@@ -10,7 +10,7 @@ require "user.autopairs"
 require "user.comment"
 require "user.gitsigns"
 require "user.nvim-tree"
-require "user.bufferline"
+-- require "user.bufferline"
 require "user.lualine"
 require "user.toggleterm"
 require "user.project"
@@ -74,6 +74,7 @@ require "user.vim-test"
 -- ctrl-p for history search
 -- ctro-o-p for jump between history buffers
 -- for changing MACOS space
+-- autocomplete
 
 -- use 'tpope/vim-surround'
 -- (surround above and below) <visual-mode>+gS
@@ -81,6 +82,7 @@ require "user.vim-test"
 -- cs<original surround or single char text-obj><new_surround_char>
 -- ds<add-char>
 -- arround ys<text-object><add-char>
+-- ctrl and layer 2 conflict ( now use as ctrl for right hand thumb)
 
 -- lazygit
 -- A commit current staged files to specific commit

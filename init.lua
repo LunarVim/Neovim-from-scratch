@@ -13,6 +13,6 @@ require "user.abbrs"
 -- b/c it's where I will be adding plugins to packer.
 -- I like that Packer is fully in lua.
 require "user.plugins"
--- This is where I will add my plugins.
+-- This is where I will add my color-schemes.
 require "user.colorscheme"
 

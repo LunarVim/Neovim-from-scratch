@@ -83,6 +83,7 @@ require "user.vim-test"
 -- ds<add-char>
 -- arround ys<text-object><add-char>
 -- ctrl and layer 2 conflict ( now use as ctrl for right hand thumb)
+-- XXX caused my index finger curved
 
 -- lazygit
 -- A commit current staged files to specific commit
@@ -94,3 +95,13 @@ require "user.vim-test"
 -- S stash
 
 -- cmp autocomplete press enter will select the first one but I might not want that.
+
+-- cmp does not include old string c-n c-p
+
+-- rails gf on class not working (ctag?)
+
+-- tab file name path
+
+-- {} extra space if has content
+
+--  TODO Rg first then fzf by path

@@ -52,7 +52,7 @@ return packer.startup(function(use)
   use "tpope/vim-surround"         -- great tag/code-encapsulator plugin.
 
   -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim

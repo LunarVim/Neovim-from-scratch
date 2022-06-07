@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Neovim from scratch
 
 ## Try out this config
@@ -56,3 +57,6 @@ Next we need to install python support (node is optional)
   ```
   npm i -g neovim
   ```
+=======
+# neovim-from-scratch
+>>>>>>> d1b2f56 (Initial commit)

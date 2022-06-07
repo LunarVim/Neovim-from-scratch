@@ -39,6 +39,7 @@ local options = {
   incsearch = true,                                    -- Turn on incremental search highlighting.
   ignorecase = true,                                   -- Ignore case in search patterns.
   smartcase = false,                                   -- Overides ignore case, w/ capitals. Default = false.
+  hidden = true,                                       -- Saves all buffers before an exit. if hidden biffers exist.
 }
 -- A lua for-loop to loop through the above table of options.
 -- A table is a list, that is allowed key, value pairs.

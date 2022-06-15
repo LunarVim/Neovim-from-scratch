@@ -1,5 +1,6 @@
 -- :help options
-local options = {
+local options = 
+{
 -- Display settings:
   fileencoding = "utf-8",                              -- The encoding written to a file.
   showtabline = 2,                                     -- Always show tabs.
@@ -54,7 +55,7 @@ local options = {
 -- Did NOT fit well within the options loop , without throwing errors and disabling the loop.
   vim.opt.shortmess:append "I"                    -- Set No Intro-message for Neo-vim.
 
--- vim.cmd Passes strings, that will be interpreted as vim-script.
--- vim.cmd "set whichwrap+=<,>,[,],h,l" Want to find out what it does, before blindly enabling it.
-  vim.cmd [[set iskeyword+=-]] -- Will treat words with a dash as part of a single word.
---vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+--  vim.cmd Passes strings, that will be interpreted as vim-script.
+  vim.cmd "set whichwrap+=<,>,[,],h,l" -- Want to find out what it does, before blindly enabling it.
+--vim.cmd [[set iskeyword+=-]] -- Will treat words with a dash as part of a single word.
+--  vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work

@@ -19,8 +19,9 @@ lsp_installer.on_server_ready(function(server)
   if server.name == "gopls" then
     local f=io.open("./tools/bazel/gopackagesdriver.sh","r")
     if f~=nil then 
-      io.close(f) 
-      vim.fn.setenv("GOPACKAGESDRIVER", "./tools/bazel/gopackagesdriver.sh")
+      io.close(f)
+      dir = vim.fn.getcwd() 
+      vim.fn.setenv("GOPACKAGESDRIVER", dir .. "/tools/bazel/gopackagesdriver.sh")
     end
     local gopls_opts = require("user.lsp.settings.gopls")
 	 	opts = vim.tbl_deep_extend("force", gopls_opts, opts)

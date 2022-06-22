@@ -198,6 +198,11 @@ local mappings = {
     p = { "<cmd>:w<cr>:!python3 %<cr>", "Run Python Code" },
     g = { "<cmd>:w<cr>:!go run %<cr>", "Run Go Code" }
   },
+  r = {
+    name = "Run",
+    p = { "<cmd>:w<cr>:!python3 %<cr>", "Run Python Code" },
+    g = { "<cmd>:w<cr>:!go run %<cr>", "Run Go Code" },
+  },
 }
 
 which_key.setup(setup)

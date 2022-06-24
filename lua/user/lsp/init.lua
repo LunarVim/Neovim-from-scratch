@@ -6,3 +6,5 @@ end
 require "user.lsp.configs"
 require("user.lsp.handlers").setup()
 require "user.lsp.null-ls"
+require('dap-go').setup()
+require('go').setup()

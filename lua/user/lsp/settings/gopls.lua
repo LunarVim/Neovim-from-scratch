@@ -1,3 +1,12 @@
+local f=io.open("./tools/bazel/gopackagesdriver.sh","r")
+if f~=nil then 
+  io.close(f)
+  dir = vim.fn.getcwd() 
+  vim.fn.setenv("GOPACKAGESDRIVER", dir .. "/tools/bazel/gopackagesdriver.sh")
+else
+  vim.fn.setenv("GOPACKAGESDRIVER", "")
+end
+
 return {
   settings = {
     cmd_env = {

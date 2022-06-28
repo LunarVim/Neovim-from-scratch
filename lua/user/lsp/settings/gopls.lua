@@ -10,7 +10,7 @@ end
 return {
   settings = {
     cmd_env = {
-    }, 
+    },
     gopls = {
       verboseOutput = true,
       directoryFilters = {

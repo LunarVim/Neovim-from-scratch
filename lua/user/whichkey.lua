@@ -124,7 +124,19 @@ local mappings = {
       "Diff",
     },
   },
-
+  d = {
+    name = "DAP Debugger",
+    g = { "<cmd>GoDebug<cr>", "Go Debug" },
+    b = { "<cmd>DapToggleBreakpoint<cr>", "Toggle Breakpoint" },
+    c = { "<cmd>DapContinue<cr>", "Continue" },
+    i = { "<cmd>DapStepInto<cr>", "Step Into" },
+    o = { "<cmd>DapStepOver<cr>", "Step Over" },
+    u = { "<cmd>DapStepOut<cr>", "Step Out" },
+    s = { "<cmd>DapStop<cr>", "Stop" },
+    f = { "<cmd>DapUiFloat<cr>", "UI Float" },
+    t = { "<cmd>DapUiToggle<cr>", "UI Toggle" },
+    r = { "<cmd>DapRerun<cr>", "Rerun" },
+  },
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },

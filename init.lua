@@ -105,3 +105,13 @@ require "user.vim-test"
 -- {} extra space if has content
 
 --  TODO Rg first then fzf by path
+
+-- yank should not affect copyboard
+
+-- switch alt, context switch break
+
+-- used up down
+
+-- tabnew hotkey
+
+-- %%

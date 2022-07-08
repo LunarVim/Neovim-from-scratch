@@ -44,4 +44,3 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
-

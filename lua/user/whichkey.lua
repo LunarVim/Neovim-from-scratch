@@ -170,21 +170,33 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
-
+ -- I dont use them at all, instead lets use it for test cases
+  -- t = {
+  --   name = "Terminal",
+  --   n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+  --   u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
+  --   t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+  --   p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+  --   f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+  --   h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
+  --   v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+  -- },
   t = {
-    name = "Terminal",
-    n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-    u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-    t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-    f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-    h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-    v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+    name = "Tests",
+    r = { "<cmd>lua require('neotest').run.run()<cr>", "Run Test Nearest to Cursor" },
+    f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "Run Test File" },
+    s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Show Test Summary" },
+    S = { "<cmd>lua require('neotest').run.stop()<cr>", "Show Test Stop" },
+    o = {"<cmd>lua require('neotest').output.open({ enter = true })<cr>", "Show Test Output"},
+    n = {"<cmd>lua require('neotest').jump.next({ status ='failed'})<cr>", "Show Next Failed Case"},
+    N = {"<cmd>lua require('neotest').jump.prev({ status ='failed'})<cr>", "Show Previous Failed Case"},
+    D = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'), strategy = 'dap')<cr>", "Debug Complete Test File" },
+    d = { "<cmd>lua require('neotest').run.run(strategy = 'dap')<cr>", "Debug Test Nearest to Cursor" }
   },
   r = {
     name = "Run",
     p = { "<cmd>:w<cr>:!python3 %<cr>", "Run Python Code" },
-    g = { "<cmd>:w<cr>:!go run %<cr>", "Run Go Code" },
+    g = { "<cmd>:w<cr>:!go run %<cr>", "Run Go Code" }
   },
 }
 

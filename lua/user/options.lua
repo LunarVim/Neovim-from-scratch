@@ -39,6 +39,7 @@ local options = {
   scrolloff = 8,                           -- scroll vertically when the cursor is <8 columns from the end
   sidescrolloff = 8,                       -- horizontally
   whichwrap = "bs<>[]hl",                  -- which "horizontal" chars are allowed to travel to prev/next line, see :help 'whichwrap'
+}
 
 vim.opt.shortmess:append("c") -- don't give Ctrl-P,Ctrl-N messages
 vim.opt.runtimepath:remove("/usr/share/vim/vimfiles") -- to separate vim plugins from neovim on Arch

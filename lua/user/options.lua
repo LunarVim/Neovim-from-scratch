@@ -8,6 +8,7 @@ local options = {
   timeoutlen = 100,                        -- time to wait for a mapped sequence to complete (in milliseconds)
   updatetime = 300,                        -- faster completion (4000ms default)
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+  clipboard = "unnamedplus",               -- use system clipboard
   -- UI
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
@@ -40,7 +41,6 @@ local options = {
 
 vim.opt.shortmess:append("c") -- don't give Ctrl-P,Ctrl-N messages
 vim.opt.runtimepath:remove("/usr/share/vim/vimfiles") -- to separate vim plugins from neovim on Arch
-vim.opt.clipboard:append("unnamedplus") -- use system clipboard
 vim.opt.mouse:append("a") -- allow the mouse to be used in all modes
 vim.opt.iskeyword:remove("-") -- threat a-word, word- as one w
 vim.opt.formatoptions:remove("cro") -- see :help fo-table

@@ -49,7 +49,7 @@ vim.api.nvim_create_autocmd(
 )
 
 -- Autoformat
-local au_lsp = vim.api.nvim_create_augroup("_lsp", {clear = true})
+local au_lsp = vim.api.nvim_create_augroup("_lsp", {clear = true}) -- don't comment out
 -- vim.api.nvim_create_autocmd(
 -- 	"BufWritePre", {group = au_lsp, command = "lua vim.lsp.buf.formatting()"}
 -- )

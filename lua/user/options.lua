@@ -1,46 +1,50 @@
 local options = {
+  -- Core
   backup = false,                          -- creates a backup file
-  clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
+  undofile = true,                         -- enable persistent undo
+  swapfile = false,                        -- creates a swapfile
+  fileencoding = "utf-8",                  -- the encoding written to a file
+  termguicolors = true,                    -- set term gui colors, mandatory for most plugins (most terminals support this, if yours doesn't, e.g. tty, just use vim)
+  timeoutlen = 100,                        -- time to wait for a mapped sequence to complete (in milliseconds)
+  updatetime = 300,                        -- faster completion (4000ms default)
+  writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+  -- UI
+  guifont = "monospace:h17",               -- the font used in graphical neovim applications
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
-  fileencoding = "utf-8",                  -- the encoding written to a file
-  hlsearch = true,                         -- highlight all matches on previous search pattern
-  ignorecase = true,                       -- ignore case in search patterns
-  mouse = "a",                             -- allow the mouse to be used in neovim
   pumheight = 10,                          -- pop up menu height
+  wrap = false,                            -- display lines as one long line
   showmode = false,                        -- we don't need to see things like -- INSERT -- anymore
+  signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   showtabline = 2,                         -- always show tabs
-  smartcase = true,                        -- smart case
-  smartindent = true,                      -- make indenting smarter again
+  numberwidth = 4,                         -- set number column width to 2 (default 4)
   splitbelow = true,                       -- force all horizontal splits to go below current window
   splitright = true,                       -- force all vertical splits to go to the right of current window
-  swapfile = false,                        -- creates a swapfile
-  -- termguicolors = true,                    -- set term gui colors (most terminals support this)
-  timeoutlen = 100,                        -- time to wait for a mapped sequence to complete (in milliseconds)
-  undofile = true,                         -- enable persistent undo
-  updatetime = 300,                        -- faster completion (4000ms default)
-  writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+  number = true,                           -- set numbered lines
+  relativenumber = false,                  -- set relative numbered lines
+  cursorline = true,                       -- highlight the current line
+  -- Search
+  hlsearch = true,                         -- highlight all matches on previous search pattern
+  ignorecase = true,                       -- ignore case in search patterns
+  smartcase = true,                        -- don't ignore if there's uppercase
+  -- Indent
   expandtab = true,                        -- convert tabs to spaces
   shiftwidth = 2,                          -- the number of spaces inserted for each indentation
   tabstop = 2,                             -- insert 2 spaces for a tab
-  cursorline = true,                       -- highlight the current line
-  number = true,                           -- set numbered lines
-  relativenumber = false,                  -- set relative numbered lines
-  numberwidth = 4,                         -- set number column width to 2 {default 4}
-  signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
-  wrap = false,                            -- display lines as one long line
-  scrolloff = 8,                           -- is one of my fav
-  sidescrolloff = 8,
-  guifont = "monospace:h17",               -- the font used in graphical neovim applications
-}
+  smartindent = true,                      -- make indenting smarter again
+  -- Other
+  scrolloff = 8,                           -- scroll vertically when the cursor is <8 columns from the end
+  sidescrolloff = 8,                       -- horizontally
+  whichwrap = "bs<>[]hl",                  -- which "horizontal" chars are allowed to travel to prev/next line, see :help 'whichwrap'
 
-vim.opt.shortmess:append "c"
+vim.opt.shortmess:append("c") -- don't give Ctrl-P,Ctrl-N messages
+vim.opt.runtimepath:remove("/usr/share/vim/vimfiles") -- to separate vim plugins from neovim on Arch
+vim.opt.clipboard:append("unnamedplus") -- use system clipboard
+vim.opt.mouse:append("a") -- allow the mouse to be used in all modes
+vim.opt.iskeyword:remove("-") -- threat a-word, word- as one w
+vim.opt.formatoptions:remove("cro") -- see :help fo-table
 
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
-
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work

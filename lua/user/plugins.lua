@@ -19,7 +19,7 @@ end
 local au_packer = vim.api.nvim_create_augroup("packer_autoconf", {clear = true})
 vim.api.nvim_create_autocmd(
 	"BufWritePost", {group = au_packer, pattern = "plugins.lua",
-	command = "source <afile> <Bar> PackerSync",
+	command = "source <afile> | PackerSync",
 	desc = "Reloads nvim when you save plugins.lua"}
 )
 

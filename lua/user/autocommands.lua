@@ -41,25 +41,15 @@ vim.api.nvim_create_autocmd(
 	"VimResized", {group = au_res, command = "tabdo wincmd ="}
 )
 
--- Autoformat
--- local au_lsp = vim.api.nvim_create_augroup("_lsp", {clear = true})
--- vim.api.nvim_create_autocmd(
--- 	"BufWritePre", {group = au_lsp, command = "lua vim.lsp.buf.formatting()"}
--- )
-
--- Using <Bar> instead of | caused my neovim to either error out or remove tabline completely
--- Which is really weird and must be a bug
--- If it still happens to you anyways, use vim.cmd as a fallback
 local aulpha = vim.api.nvim_create_augroup("_alpha", {clear = true})
 vim.api.nvim_create_autocmd(
 	"User", {group = aulpha, pattern = "AlphaReady",
 		command = "set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2"
 	}
 )
--- autocmd! remove all autocommands, if entered under a group it will clear that group
--- vim.cmd [[
--- 	augroup _alpha
--- 		autocmd!
--- 		autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
--- 	augroup end
--- ]]
+
+-- Autoformat
+-- local au_lsp = vim.api.nvim_create_augroup("_lsp", {clear = true})
+-- vim.api.nvim_create_autocmd(
+-- 	"BufWritePre", {group = au_lsp, command = "lua vim.lsp.buf.formatting()"}
+-- )

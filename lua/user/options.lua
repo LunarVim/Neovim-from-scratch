@@ -38,13 +38,19 @@ local options = {
   -- Other
   scrolloff = 8,                           -- scroll vertically when the cursor is <8 columns from the end
   sidescrolloff = 8,                       -- horizontally
-  whichwrap = "bs<>[]hl",                  -- which "horizontal" chars are allowed to travel to prev/next line, see :help 'whichwrap'
+  whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line, see :help 'whichwrap'
 }
 
+-- vim.opt.shortmess = "ilmnrx" -- flags to shorten vim messages, see :help 'shortmess'
 vim.opt.shortmess:append("c") -- don't give Ctrl-P,Ctrl-N messages
 vim.opt.runtimepath:remove("/usr/share/vim/vimfiles") -- to separate vim plugins from neovim on Arch
-vim.opt.iskeyword:remove("-") -- threat a-word, word- as one w
-vim.opt.formatoptions:remove("cro") -- see :help fo-table
+vim.opt.iskeyword:remove("-") -- treat a-word, word- as one w
+
+-- see :help fo-table
+-- These 3 lines worked, I assume `-=cro`/`remove("cro") didn't work because they only accept 1 char/flag
+vim.opt.formatoptions:remove("c")
+vim.opt.formatoptions:remove("r")
+vim.opt.formatoptions:remove("o")
 
 for k, v in pairs(options) do
   vim.opt[k] = v

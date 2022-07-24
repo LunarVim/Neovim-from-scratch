@@ -33,6 +33,11 @@ local options = {
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
+  formatoptions = {
+    c = false, -- Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
+    r = false, -- Automatically insert the current comment leader after hitting <Enter> in Insert mode.
+    o = false, -- Auto-wrap comments using textwidth, inserting the current comment leader automatically.
+  },
 }
 
 vim.opt.shortmess:append "c"
@@ -43,4 +48,4 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+

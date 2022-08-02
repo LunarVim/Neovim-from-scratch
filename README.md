@@ -1,3 +1,36 @@
+* [Packer](https://github.com/wbthomason/packer.nvim) - for Vim Plugin management
+* [Treesitter](nvim-treesitter/nvim-treesitter)
+* [Telescope](https://www.youtube.com/watch?v=OhnLevLpGB4&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=9)
+* LSP and completion support 
+* [Toggleterm](https://www.youtube.com/watch?v=5OD-7h7gzxU&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=18)
+* [LazyGit](https://github.com/kdheepak/lazygit.nvim)
+* [Alpha Greeter Menu](https://github.com/goolord/alpha-nvim)
+* [Bufferline](https://www.youtube.com/watch?v=vJAmjAax2H0&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=16) - Buffers displayed as a Tab line
+* [NvimTree File Explorer](https://www.youtube.com/watch?v=SpexCBrZ1pQ&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=15)
+* [Lua Snip](https://github.com/L3MON4D3/LuaSnip") - Snippet support
+* [Project Management Plugin](https://github.com/ahmedkhalf/project.nvim) - keeps track of your projects so you quickjump / Telescope cd to them
+* [WhichKey](https://github.com/folke/which-key.nvim)
+
+Things I've added:
+* Go LSP and debugger support. (You'll need to install gopls and delve)
+  - gopls with or without Bazel  If you open a non Bazel Go project, Gopls should still work as we detect if there is a GOPACKAGESDRIVER Bazel shell script to use in the repo and if not we don't set the environment variable to use it..
+  - [Nvim Dap Debugger](https://github.com/mfussenegger/nvim-dap) + [Dap Go Adapter](https://github.com/leoluz/nvim-dap-go) + [Nvim Dap UI](https://github.com/rcarriga/nvim-dap-ui) 
+    - Debugger options can be accessed via `<leader + d>`
+* Git add ons: 
+  - [vim-fugitive](https://github.com/tpope/vim-fugitive)
+  - [vim-rhubarb](https://github.com/tpope/vim-rhubarb) -- Opens Github in a browser
+  - [gv.vim](https://github.com/junegunn/gv.vim) -- Git history
+  - [critiq.vm](https://github.com/AGhost-7/critiq.vim) -- Pull requests in Git
+  - [ripgrep](https://github.com/BurntSushi/ripgrep)
+* [Vimwiki](https://github.com/vimwiki/vimwiki)
+* [Taskwiki](https://github.com/tools-life/taskwiki)
+
+  
+
+Overview Video : https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
+
+Leader key is mapped to `<space>`. If you just want to see the keymaps available to you, just hit space in normal mode and you should get a menu popup. There is also a nice default menu if you just open nvim without editing a file.
+
 # Neovim from scratch
 
 **Important Update** When I initially created this repo I didn't anticipate the amount of breaking changes, if you'd like to use the same basic config as this one as a base I recommend my new repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)

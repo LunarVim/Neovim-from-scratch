@@ -46,7 +46,7 @@ end
 
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
-    if client.server_capabilities.documentFormattingProvider then
+    if client.server_capabilities.documentHighlightProvider then
   vim.api.nvim_exec(
       [[
       augroup lsp_document_highlight
@@ -82,6 +82,9 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
+  vim.cmd [[ hi LspReferenceText cterm=bold gui=bold ]]
+  vim.cmd [[ hi LspReferenceRead cterm=bold gui=bold ]]
+  vim.cmd [[ hi LspReferenceWrite cterm=bold gui=bold ]]
 end
 
 M.on_attach = function(client, bufnr)

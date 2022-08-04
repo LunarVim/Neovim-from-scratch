@@ -14,7 +14,7 @@
 Things I've added:
 * Go LSP and debugger support. (You'll need to install gopls and delve)
   - gopls with or without Bazel  If you open a non Bazel Go project, Gopls should still work as we detect if there is a GOPACKAGESDRIVER Bazel shell script to use in the repo and if not we don't set the environment variable to use it..
-  - [Nvim Dap Debugger](https://github.com/mfussenegger/nvim-dap) + [Dap Go Adapter](https://github.com/leoluz/nvim-dap-go) + [Nvim Dap UI](https://github.com/rcarriga/nvim-dap-ui) 
+  - [Nvim Dap Debugger](https://github.com/mfussenegger/nvim-dap) + [Dap Go Adapter](https://github.com/leoluz/nvim-dap-go) + [Nvim Dap UI](https://github.com/rcarriga/nvim-dap-ui) + [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text)
     - Debugger options can be accessed via `<leader + d>`
 * Git add ons: 
   - [vim-fugitive](https://github.com/tpope/vim-fugitive)

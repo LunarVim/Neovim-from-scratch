@@ -47,7 +47,7 @@ return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim" }) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim"}) -- Useful lua functions used by lots of plugins
 	use({ "windwp/nvim-autopairs"}) -- Autopairs, integrates with both cmp and treesitter
-	use({ "numToStr/Comment.nvim"})
+--	use({ "numToStr/Comment.nvim"})
 	use({ "JoosepAlviste/nvim-ts-context-commentstring"})
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "kyazdani42/nvim-tree.lua" })

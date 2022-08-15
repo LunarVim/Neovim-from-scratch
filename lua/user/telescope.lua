@@ -92,5 +92,12 @@ telescope.setup {
     --   extension_config_key = value,
     -- }
     -- please take a look at the readme of the extension you want to configure
+      -- the shell command to use
+    tldr = {
+      -- shell command to use
+      tldr_command = 'tldr',
+      -- a string of extra arguments to pass to `tldr`, e.g. tldr_args = '--color always'
+      tldr_args = ''
+    },
   },
 }

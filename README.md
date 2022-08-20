@@ -25,7 +25,43 @@ Things I've added:
 * [Vimwiki](https://github.com/vimwiki/vimwiki)
 * [Taskwiki](https://github.com/tools-life/taskwiki)
 
-  
+# Install instructions
+* `brew install --HEAD nvim`  # this installs latest dev version - can use stable instead, but should be on nvim 8
+  - (if nvim stable is already installed): `brew unlink nvim` 
+* `git clone https://github.com/muxinc/Neovim-from-scratch.git ~/.config/nvim` 
+*  go should be at 1.17.6+
+* `LspInstallInfo` showed gopls was available but not installed - installed it with `i`
+
+#### Intstall tools for Go 
+Pick and choose the ones you want - gopls is needed and delve debugger is recommended
+* `go install golang.org/x/tools/gopls@latest` -- go LSP support
+* `go install github.com/go-delve/delve/cmd/dlv@latest` -- delve debugger
+* `go install golang.org/x/tools/cmd/goimports@latest` -- updates your Go import lines, adding missing ones and removing unreferenced ones
+* `go install github.com/kyoh86/richgo@latest` -- enrich go test outputs with text decorations
+* `go install github.com/cweill/gotests/gotests@latest` -- generates table driven tests based on its target source files' function and method signatures
+* `go install github.com/onsi/ginkgo/ginko@latest` -- testing framework for Go designed to help you write expressive specs.
+* `go install golang.org/x/tools/cmd/gorename@latest` -- performs precise type-safe renaming of identifiers in Go source code
+* `go install github.com/segmentio/golines@v0.9.0` -- shortens long line - 0.9.0 <-> go 1.17 - when we upgrade to 1.18+, bump to latest
+* `go install mvdan.cc/gofumpt@latest` -- stricter and backwards compatible gofmt
+* `go install golang.org/x/tools/cmd/callgraph@latest` -- defines the call graph and various algorithms and utilities to operate on it 
+* `go install github.com/koron/iferr@latest` -- Generate if err != nil { block for current function.
+* `go install github.com/davidrjenni/reftools/cmd/fillstruct@latest` -- refactoring : fills a struct literal with default values
+* `go install golang.org/x/tools/cmd/guru@latest` -- a tool for answering questions about Go source code.
+* `go install github.com/fatih/gomodifytags@latest` -- makes it easy to update, add or delete the tags in a struct field
+* `go install github.com/davidrjenni/reftools/cmd/fillswitch@latest` -- fills (type) switches with case statements
+
+#### Install search tools - ripgrep and silver searcher
+You can type `\` in normal mode to trigger ripgrep search - you also need silversearcher (ag) or else you'll see the error: 
+`E488: Trailing characters: /dev/null: redraw! /dev/null`
+* `brew install ag`
+* `brew install rg`
+#### Install formatters and linter support for null-ls 
+* `brew install prettier`
+* `brew install black`
+* `brew install sytlua`
+
+## Post install :checkhealth
+- Open nvim and run `:checkhealth` to verify everything is working and configured properly 
 
 Overview Video : https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
 

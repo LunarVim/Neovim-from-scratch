@@ -7,6 +7,9 @@ local lspconfig = require("lspconfig")
 
 local servers = { "jsonls", "sumneko_lua", "gopls" }
 
+require('dap')
+vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
+
 lsp_installer.setup({
 	ensure_installed = servers,
 })

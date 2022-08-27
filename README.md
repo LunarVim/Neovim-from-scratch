@@ -67,6 +67,20 @@ Overview Video : https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq4
 
 Leader key is mapped to `<space>`. If you just want to see the keymaps available to you, just hit space in normal mode and you should get a menu popup. There is also a nice default menu if you just open nvim without editing a file.
 
+# Tips and Useful Shortcuts
+Many users may be switching over from Vim, so things like Lua, Treesitter and things like native LSP may be different. There is also a plugin manager called Packer that's different than vim-plug. This section aims to call out some of the most important tricks and commands that are useful in troubleshooting a setup.
+
+## Packer
+`:PackerStatus` : List all the installed plugins and expand them to find out the url of where they came from, where they are installed locally (basically a git pull at what ever revision was specified).
+
+## Logs
+`~/.cache/nvim/lsp.log`
+`~/.cache/nvim/dap.log` : Debugger Adapter Protocol plugin - See below on info on how to increase the log level.
+
+## Dap 
+- `lua require('dap').set_log_level('TRACE')` : If you are trying to troubleshoot why the Debugger might not be attaching properly, perhaps to a remote server, you can set the log level to trace. Logs show up at: `~/.cache/nvim/dap.log` 
+
+
 # Neovim from scratch
 
 **Important Update** When I initially created this repo I didn't anticipate the amount of breaking changes, if you'd like to use the same basic config as this one as a base I recommend my new repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)

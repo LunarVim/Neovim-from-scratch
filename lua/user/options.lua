@@ -41,6 +41,13 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+--fold
+
+vim.cmd [[set foldmethod=expr]]
+vim.cmd [[set foldexpr=nvim_treesitter#foldexpr()]]
+vim.cmd [[set foldlevel=20]]
+
+
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work

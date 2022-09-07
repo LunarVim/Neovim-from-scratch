@@ -10,6 +10,18 @@ configs.setup({
 		enable = true, -- false will disable the whole extension
 		disable = { "css" }, -- list of language that will be disabled
 	},
+  textsubjects = {
+        enable = true,
+        prev_selection = ',', -- (Optional) keymap to select the previous selection
+        keymaps = {
+            ['.'] = 'textsubjects-smart',
+            [';'] = 'textsubjects-container-outer',
+            ['i;'] = 'textsubjects-container-inner',
+        },
+    },
+  autotag = {
+    enable = true,
+  },
 	autopairs = {
 		enable = true,
 	},

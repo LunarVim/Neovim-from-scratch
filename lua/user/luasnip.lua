@@ -24,15 +24,6 @@ ls.config.set_config {
 
 -- Mappings
 
-_G.tab_complete = function()
-  if ls and ls.expand_or_jumpable() then
-    return '<Plug>luasnip-expand-or-jump'
-  else
-    return '<tab>'
-  end
-end
-vim.keymap.set({ 'i', 's' }, '<tab>', 'v:lua.tab_complete()', { expr = true })
-
 _G.shift_tab_jump = function()
   if ls.jumpable(-1) then
     return '<Plug>luasnip-jump-prev'

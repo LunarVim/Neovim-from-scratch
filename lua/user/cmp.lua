@@ -119,6 +119,9 @@ cmp.setup {
   },
   documentation = {
     border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    max_width = 50,
+    max_height = 80,
+
   },
   experimental = {
     ghost_text = false,

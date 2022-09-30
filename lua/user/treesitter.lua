@@ -4,6 +4,11 @@ if not status_ok then
 end
 
 configs.setup({
+   matchup = {
+    enable = true,              -- mandatory, false will disable the whole extension
+    disable = { "c", "ruby" },  -- optional, list of language that will be disabled
+    -- [options]
+  },
 	ensure_installed = "all", -- one of "all" or a list of languages
 	ignore_install = { "" }, -- List of parsers to ignore installing
 	highlight = {

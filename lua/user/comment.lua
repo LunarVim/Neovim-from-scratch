@@ -19,7 +19,12 @@ comment.setup {
       location = utils.get_visual_start_location()
     end
 
-    return utils.calculate_commentstring {
+    local status_internals_ok, internals = pcall(require, "ts_context_commentstring.internals")
+    if not status_internals_ok then
+      return
+    end
+
+    return internals.calculate_commentstring {
       key = ctx.ctype == U.ctype.line and "__default" or "__multiline",
       location = location,
     }

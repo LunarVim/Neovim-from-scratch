@@ -41,11 +41,11 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
   -- Format:
   -- user/repo -- Some useful comment
   -- location of plugins: ~/.local/share/nvim/site/pack/packer/start/ 
   -- being in "start" folder they start automatically. "Start" folder contains cloned repos of plugins whivh have "lua" directory in them where all the useful settings reside
+  -- My plugins here
 
 
   use "wbthomason/packer.nvim" -- Have packer manage itself

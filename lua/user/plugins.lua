@@ -26,6 +26,7 @@ vim.cmd [[
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
+  vim.notify("Packer Protected call failed. Returning...")
   return
 end
 
@@ -41,9 +42,17 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
+  -- Format:
+  -- user/repo -- Some useful comment
+  -- location of plugins: ~/.local/share/nvim/site/pack/packer/start/ 
+  -- being in "start" folder they start automatically. "Start" folder contains cloned repos of plugins whivh have "lua" directory in them where all the useful settings reside
+
+
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
+  use "lunarvim/colorschemes"  -- colorschemes for lunarvim
+  use "folke/tokyonight.nvim" -- more colorschemes
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

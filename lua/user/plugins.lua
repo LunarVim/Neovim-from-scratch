@@ -93,7 +93,7 @@ use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "4d3a68c41a53add88
 	}
 
 	-- Git
-	use { "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" }
+	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

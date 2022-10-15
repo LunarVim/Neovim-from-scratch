@@ -46,4 +46,3 @@ gitsigns.setup {
     enable = false,
   },
 }
-

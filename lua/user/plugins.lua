@@ -90,6 +90,7 @@ return packer.startup(function(use)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
+    commit = '5d11dfc27849e3d7435c32dbd8ea9be35bcd990b', -- treesitter syntax highlighting didnt looked as beautiful after this version. Comments etc were all white instead of green
   }
 
   use 'JoosepAlviste/nvim-ts-context-commentstring'  -- this tells what kind of comment string to use depending on the language

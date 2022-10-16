@@ -1,4 +1,8 @@
-local configs = require("nvim-treesitter.configs")
+local status_ok, configs = pcall(require, "nvim-treesitter.configs")
+if not status_ok then
+    return
+end
+
 configs.setup {
     ensure_installed = "all", -- one of "all", "maintained"(actively maintained parsers), or a list of languages. But "maintained" got deprecated, so keep poorly maintained ones in "ignore_install"
     sync_install = false,  -- install languages synchronously (only applied to 'ensure_installed')

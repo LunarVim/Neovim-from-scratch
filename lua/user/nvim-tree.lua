@@ -50,10 +50,8 @@ nvim_tree.setup {
     },
     view = {
         width = 30,
-        height = 30,
         hide_root_folder = false,
         side = "left",
-        auto_resize = true,
         mappings = {
             custom_only = false,
             list = {
@@ -64,10 +62,26 @@ nvim_tree.setup {
         },
         number = false,
         relativenumber = false,
+
+        float = {
+          enable = false,
+          quit_on_focus_loss = true,
+          open_win_config = {
+            relative = "editor",
+            border = "rounded",
+            width = 30,
+            height = 30,
+            row = 1,
+            col = 1,
+          },
+        },
     },
     actions = {
-        quit_on_open = true,
-        window_picker = { enable = true },
+        open_file = {
+            resize_window = true,
+            quit_on_open = true,
+            window_picker = { enable = true },
+        }
     },
     renderer = {
         highlight_git = true,

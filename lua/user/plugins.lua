@@ -74,6 +74,7 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "RRethy/vim-illuminate" -- highlight matching texts when cursor is on it
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -85,7 +86,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow"
-  use "nvim-treesitter/playground"
+  -- use "nvim-treesitter/playground"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

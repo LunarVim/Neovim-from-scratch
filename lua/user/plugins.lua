@@ -55,7 +55,7 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
+  use {"akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda"}
   use "folke/which-key.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use 'lewis6991/impatient.nvim'

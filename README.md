@@ -8,10 +8,9 @@ Make sure to remove or move your current `nvim` directory
 git clone git@github.com:ChristianChiarulli/Neovim-from-scratch.git ~/.config/nvim
 ```
 
-Run `nvim` and wait for the plugins to be installed 
+Run `nvim` and wait for the plugins to be installed. (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
 
-**NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
-
+**NOTE** [Mason](https://github.com/williamboman/mason.nvim) is now used to install and manage LSP servers, DAP servers, linters, and formatters via the `:Mason` command.
 
 each video will be associated with a branch so checkout the one you are interested in
 

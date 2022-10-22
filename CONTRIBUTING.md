@@ -12,7 +12,7 @@
 
 ### 1. Fork the Project 🍴
 
-Fork this repository and make changes in code as required. You can change it online or by cloning it in your device. Then Pust it on your Forked Repo for further Actions. Do not use special characters in the template above.
+Fork this repository and make changes in code as required. You can change it online or by cloning it in your device. Then Push it on your Forked Repo for further Actions. Do not use special characters in the template above.
 
 ![Screenshot 2022-10-23 at 12 14 31 AM](https://user-images.githubusercontent.com/70846580/197357680-a2cdfafb-9c4e-4953-95b6-7b7db8277206.png)
 
@@ -56,4 +56,4 @@ Wait for your edits to be merged before proceeding.
 Hurray! <b>You've made a significant contribution! :partying_face:🎉<b>
 
   
-  <Small> Thank Yu  </small>
+  <Small> Thank You  </small>

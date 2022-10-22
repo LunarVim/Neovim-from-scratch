@@ -14,7 +14,8 @@
 
 Fork this repository and make changes in code as required. You can change it online or by cloning it in your device. Then Pust it on your Forked Repo for further Actions. Do not use special characters in the template above.
 
-![forked](https://user-images.githubusercontent.com/63325246/138092106-83ca7ed0-1ec3-4d01-a90c-ae3362bef4f5.jpg)
+![Screenshot 2022-10-23 at 12 14 31 AM](https://user-images.githubusercontent.com/70846580/197357680-a2cdfafb-9c4e-4953-95b6-7b7db8277206.png)
+
 
 ## 3. Create a new branch 
 
@@ -55,4 +56,4 @@ Wait for your edits to be merged before proceeding.
 Hurray! <b>You've made a significant contribution! :partying_face:🎉<b>
 
   
-  <Small> [Thank You](https://github.com/Aniketmishra0) </small>
+  <Small> Thank Yu  </small>

@@ -23,7 +23,13 @@ local settings = {
 }
 
 require("mason").setup(settings)
-require("mason-lspconfig").setup({
+local status_malsp_ok, malsp = pcall(require, "mason-lspconfig")
+if not status_malsp_ok then
+    vim.notify("mason-lspconfig not found")
+    return
+end
+
+malsp.setup({
 	ensure_installed = servers,
 	automatic_installation = true,
 })
@@ -35,7 +41,7 @@ end
 
 local opts = {}
 
-for _, server in pairs(servers) do
+for _, server in pairs(malsp.get_installed_servers()) do
 	opts = {
 		on_attach = require("user.lsp.handlers").on_attach,
 		capabilities = require("user.lsp.handlers").capabilities,

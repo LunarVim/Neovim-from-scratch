@@ -30,19 +30,18 @@ local options = {
   numberwidth = 4,                         -- set number column width to 2 {default 4}
 
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
-  wrap = true,                            -- display lines as one long line
+  wrap = true,                             -- display lines as one long line
   linebreak = true,                        -- companion to wrap, don't split words
   scrolloff = 8,                           -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
 }
 
-vim.opt.shortmess:append "c"
-
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+vim.opt.shortmess:append "c"                -- don't show the dumb matching stuff
+vim.opt.whichwrap:append "<,>,[,],h,l"      -- let movement keys reach the previous line
+vim.opt.iskeyword:append "-"                -- used in searching and recognition by many commands
+vim.opt.formatoptions:remove({ "c", "r", "o" })     -- To stop inserting the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in Insert mode, or hitting 'o' or 'O' in Normal mode.

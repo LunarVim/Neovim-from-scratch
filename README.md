@@ -2,7 +2,7 @@
 
 **Important Update** When I initially created this repo I didn't anticipate the amount of breaking changes, if you'd like to use the same basic config as this one as a base I recommend my new repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 
-**Another Update** This repo should work fine with Neovim 0.8, also all packages are pinned so it should remain stable.
+**Another Update** This repo should work fine with Neovim 0.8, also all packages are pinned in the `master` branch so it should remain stable.
 
 Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
 
@@ -46,6 +46,11 @@ First we'll fix copy/paste
   ```
   sudo pacman -S xsel
   ```
+  
+- Wayland users
+
+  [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
+
 
 Next we need to install python support (node is optional)
 

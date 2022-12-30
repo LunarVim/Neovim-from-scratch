@@ -14,6 +14,11 @@ Make sure to remove or move your current `nvim` directory
 ```
 git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
 ```
+# **Windows** you absolutely need :
+
+```
+https://github.com/BurntSushi/ripgrep/releases
+``` 
 
 Run `nvim` and wait for the plugins to be installed. (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
 

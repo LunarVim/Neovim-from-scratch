@@ -4,22 +4,48 @@ if not status_ok then
 end
 
 local dashboard = require("alpha.themes.dashboard")
-dashboard.section.header.val = {
-	[[                               __                ]],
-	[[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
-	[[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
-	[[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
-	[[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
-	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
+
+header = {
+  [[                               __                ]],
+  [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
+  [[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
+  [[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
+  [[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
+  [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 }
+
+header = {
+  [[.____        .__         ]],
+  [[|    | ___  _|__| _____  ]],
+  [[|    | \  \/ /  |/     \ ]],
+  [[|    |__\   /|  |  Y Y  \]],
+  [[|_______ \_/ |__|__|_|  /]],
+  [[        \/            \/ ]],
+  [[        not really       ]]
+}
+
+header = {
+  [[ __                                     ]],
+  [[/\ \                 __                 ]],
+  [[\ \ \       __  __  /\_\     ___ ___    ]],
+  [[ \ \ \  __ /\ \/\ \ \/\ \  /' __` __`\  ]],
+  [[  \ \ \L\ \\ \ \_/ | \ \ \ /\ \/\ \/\ \ ]],
+  [[   \ \____/ \ \___/   \ \_\\ \_\ \_\ \_\]],
+  [[    \/___/   \/__/     \/_/ \/_/\/_/\/_/]],
+  [[             not really                 ]],                                   
+}
+    
+
+dashboard.section.header.val = header 
+
 dashboard.section.buttons.val = {
-	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
-	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-	dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
-	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-	dashboard.button("c", "  Configuration", ":e $MYVIMRC <CR>"),
-	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+	dashboard.button("f", "  find file", ":Telescope find_files <cr>"),
+	dashboard.button("e", "  new file", ":ene <bar> startinsert <cr>"),
+	dashboard.button("p", "  find project", ":Telescope projects <cr>"),
+	dashboard.button("r", "  recently used files", ":Telescope oldfiles <cr>"),
+	dashboard.button("t", "  find text", ":Telescope live_grep <cr>"),
+	dashboard.button("c", "  configuration", ":e $myvimrc <cr>"),
+	dashboard.button("q", "  quit neovim", ":qa<cr>"),
 }
 
 local function footer()
@@ -28,7 +54,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "chrisatmachine.com"
+	return "evertonse.junior@gmail.com"
 end
 
 dashboard.section.footer.val = footer()

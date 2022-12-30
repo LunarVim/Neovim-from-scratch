@@ -47,8 +47,8 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-j>", "<Esc>:m .+1<CR>==g", opts)
+keymap("n", "<A-k>", "<Esc>:m .-2<CR>==g", opts)
 
 -- Insert --
 -- Press jk fast to exit insert mode 
@@ -217,3 +217,6 @@ keymap('i', '<S-Tab>', "<C-d>",opts)
 keymap('i', '<C-BS>','<C-w>',opts) 
 -- make it work on Terminal mode
 vim.cmd('noremap! <C-BS> <C-w>')
+
+keymap('n', '<M-t>',':ToogleTerm',opts) 
+keymap('t', '<M-t>','<ESC>:ToogleTerm',opts) 

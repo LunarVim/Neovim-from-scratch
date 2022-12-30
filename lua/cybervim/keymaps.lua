@@ -90,11 +90,11 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 
 --NvimTree @Conflict probably
-keymap("n", "<leader>to", ":NvimTreeOpen<CR>"            ,opts)
-keymap("n", "<leader>tt", ":NvimTreeToggle<CR>"          ,opts)
-keymap("n", "<leader>tr", ":NvimTreeRefresh<CR>"         ,opts)
-keymap("n", "<leader>tn", ":NvimTreeFindFileToggle<CR>"  ,opts)
-keymap("n", "<leader>tf", ":NvimTreeFocus<CR>"           ,opts)
+keymap("n", "<leader>nvo", ":NvimTreeOpen<CR>"            ,opts)
+keymap("n", "<leader>nvt", ":NvimTreeToggle<CR>"          ,opts)
+keymap("n", "<leader>nvr", ":NvimTreeRefresh<CR>"         ,opts)
+keymap("n", "<leader>nve", ":NvimTreeFindFileToggle<CR>"  ,opts)
+keymap("n", "<leader>nvf", ":NvimTreeFocus<CR>"           ,opts)
 
 
 -- >> move fast with crtl move
@@ -176,7 +176,8 @@ keymap("n", "N", "Nzzzv" ,opts)
 -- greatest remap ever
 keymap("x", "<leader>p", "\"_dP",opts)
 
--- next greatest remap ever : asbjornHaland
+-- >> Clip Board options 
+-- make it not yank it, pretty much everything
 keymap("n", "<leader>y", "\"+y",opts)
 keymap("v", "<leader>y", "\"+y",opts)
 keymap("n", "<leader>Y", "\"+Y",opts)
@@ -184,9 +185,16 @@ keymap("n", "<leader>Y", "\"+Y",opts)
 keymap("n", "<leader>d", "\"_d",opts)
 keymap("v", "<leader>d", "\"_d",opts)
 
+keymap("n", "<leader>D", "\"_D",opts)
+keymap("v", "<leader>D", "\"_D",opts)
+
 keymap("n", "<leader>p", "\"+p",opts)
 keymap("v", "<leader>p", "\"+p",opts)
 keymap("n", "<leader>p", "\"+P",opts)
+
+keymap("n", "x", "_x",opts)
+-- << Clip Board options
+
 
 -- Maybe the same button for entering in both modes ??
 keymap("i", "<C-c>", "<Esc>",opts)

@@ -1,6 +1,10 @@
 local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
-
+-- WARNING, if any mapping is giving you trouble try:
+-- for terminal
+--    :verbose tmap <key you want>
+--    :verbose nmap <key you want>
+-- etc, replae n and t for v, x or i for different modes
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -17,7 +21,7 @@ local map = vim.keymap.set
 -- Set <space> as the leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+--vim.g.maplocalleader = " "
 
 -- Modes
 --   normal_mode = "n",
@@ -223,11 +227,11 @@ map('n', '<leader>lo', vim.diagnostic.setloclist, opts)
 
 -- Shift Uab undident line 
 keymap('i', '<S-Tab>', "<C-d>",opts)
-keymap('i', '<C-BS>','<C-o>db',opts) 
+--keymap('i', '<C-BS>','<C-o>db',opts) 
 
 -- <leader>te [T]oggleT[E]rm
 keymap('n', '<leader>te',':ToggleTerm<CR>',opts)
-keymap('t', '<leader>te','<ESC><ESC>:ToggleTerm<CR>',opts)
+--keymap('t', '<leader>te','<ESC><ESC>:ToggleTerm<CR>',opts)
 -- make it work on Terminal mode
 
 -- Undo with C-u on insert mode 
@@ -237,7 +241,7 @@ keymap('i', '<C-r>','<C-o><C-r>',opts)
 
 -- C-a already does ths 
 --keymap('n', '<leader>ds',':Alpha<CR>',opts)
-keymap('i', '<BS>','<ESC>:lua print("hello")',opts)
+--keymap('i', '<BS>','<ESC>:lua print("hello")',opts)
 
 --[R][E]place shortcut 
 keymap('v', '<leader>re', 'y:%s/<C-r>*/<C-r>*/<Left><Down>', opts)

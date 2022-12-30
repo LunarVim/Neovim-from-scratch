@@ -218,6 +218,8 @@ keymap('i', '<C-BS>','<C-w>',opts)
 
 -- <leader>te [T]oggleT[E]rm
 keymap('n', '<leader>te',':ToggleTerm<CR>',opts)
-keymap('t', '<leader>te','<ESC><ESC>:q<CR>',opts)
+keymap('t', '<leader>te','<ESC><ESC>:ToggleTerm<CR>',opts)
 -- make it work on Terminal mode
-vim.cmd('noremap! <leader> <ESC><ESC>:q!<CR>')
+vim.cmd('noremap! <leader>te <ESC><ESC>:q!<CR>')
+
+keymap('n', '<leader>ds',':Alpha<CR>',opts)

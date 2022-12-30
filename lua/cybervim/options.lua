@@ -18,7 +18,7 @@ local options = {
   splitright = true,                       -- force all vertical splits to go to the right of current window
   swapfile = false,                        -- creates a swapfile
   termguicolors = true,                    -- set term gui colors (most terminals support this)
-  timeoutlen = 300,                        -- time to wait for a mapped sequence to complete (in milliseconds)
+  timeoutlen = 150,                        -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true,                         -- enable persistent undo
   updatetime = 300,                        -- faster completion (4000ms default)
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
@@ -61,7 +61,6 @@ vim.o.mouse = 'a'
 
 -- Save undo history
 vim.o.undofile = true
-
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true

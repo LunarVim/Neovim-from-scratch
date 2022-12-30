@@ -5,7 +5,10 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
---Remap space as leader key
+-- [[ Basic Keymaps ]]
+-- See `:help mapleader`
+--  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+-- Set <space> as the leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -20,10 +23,10 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+--dontwork--keymap("n", "<C-e>", "<C-w>h", opts)
+--dontwork--keymap("n", "<C-j>", "<C-w>j", opts)
+--dontwork--keymap("n", "<C-k>", "<C-w>k", opts)
+--dontwork--keymap("n", "<C-q>", "<C-w>l", opts)
 
 -- Resize with arrows
 keymap("n", "<M-[>", ":resize -2<CR>", opts)
@@ -87,14 +90,6 @@ keymap("n", "<leader>r", ":NvimTreeRefresh<CR>"         ,opts)
 keymap("n", "<leader>n", ":NvimTreeFindFileToggle<CR>"  ,opts)
 keymap("n", "<leader>f", ":NvimTreeFocus<CR>"           ,opts)
 
-
-
--- [[ Basic Keymaps ]]
--- Set <space> as the leader key
--- See `:help mapleader`
---  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 
 -- >> move fast with crtl move
 vim.keymap.set("n", '<C-h>', "b",    {noremap = true, silent = true}) 
@@ -220,6 +215,5 @@ keymap('i', '<C-BS>','<C-w>',opts)
 keymap('n', '<leader>te',':ToggleTerm<CR>',opts)
 keymap('t', '<leader>te','<ESC><ESC>:ToggleTerm<CR>',opts)
 -- make it work on Terminal mode
-vim.cmd('noremap! <leader>te <ESC><ESC>:q!<CR>')
 
 keymap('n', '<leader>ds',':Alpha<CR>',opts)

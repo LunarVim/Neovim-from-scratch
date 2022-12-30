@@ -218,5 +218,5 @@ keymap('i', '<C-BS>','<C-w>',opts)
 -- make it work on Terminal mode
 vim.cmd('noremap! <C-BS> <C-w>')
 
-keymap('n', '<leader>tt',':ToggleTerm<CR>,opts)
+keymap('n', '<leader>tt',':ToggleTerm<CR>',opts)
 keymap('t', '<leader>tt','<ESC><ESC>:ToggleTerm<CR>',opts)

@@ -88,9 +88,14 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
 	}
-
-	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
+
+  --use 'tomasiser/vim-code-dark'
+	-- Git
+  
+  -- Another vs code theme:
+  -- for more options see: https://github.com/Mofiqul/vscode.nvim
+  use 'Mofiqul/vscode.nvim'
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

@@ -1,4 +1,5 @@
 local servers = {
+  "clangd",
 	"sumneko_lua",
 	-- "cssls",
 	-- "html",

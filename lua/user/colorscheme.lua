@@ -4,10 +4,9 @@ colorscheme = "material"
 colorscheme = "codedark"
 
 local  material_status_ok, material = pcall(require, "material")
-if not material_status_ok and colorscheme == "material" then
-  colorscheme = "vscode"
+if not material_status_ok then
+  colorscheme = "codedark"
 else
-
   material.setup({
     contrast = {
         terminal = false, -- Enable contrast for the built-in terminal

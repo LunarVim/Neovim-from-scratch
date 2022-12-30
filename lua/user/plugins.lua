@@ -90,13 +90,13 @@ return packer.startup(function(use)
 	}
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
 
-  --use 'tomasiser/vim-code-dark'
+  use 'tomasiser/vim-code-dark'
 	-- Git
   
   -- Another vs code theme:
   -- for more options see: https://github.com/Mofiqul/vscode.nvim
-  use 'Mofiqul/vscode.nvim'
-
+  --use 'Mofiqul/vscode.nvim'
+  --use 'marko-cerovac/material.nvim'
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

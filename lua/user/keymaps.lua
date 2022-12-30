@@ -26,10 +26,10 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<M-[>", ":resize -2<CR>", opts)
+keymap("n", "<M-]>", ":resize +2<CR>", opts)
+keymap("n", "<M-,>", ":vertical resize -2<CR>", opts)
+keymap("n", "<M-.>", ":vertical resize +2<CR>", opts)
 
 --- keeping it centered
 keymap("n", "n", "nzzzv",opts)
@@ -203,7 +203,7 @@ end)
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+vim.keymap.set("n", "<leader>r", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Diagnostic keymaps
@@ -218,5 +218,5 @@ keymap('i', '<C-BS>','<C-w>',opts)
 -- make it work on Terminal mode
 vim.cmd('noremap! <C-BS> <C-w>')
 
-keymap('n', '<M-t>',':ToogleTerm',opts) 
-keymap('t', '<M-t>','<ESC>:ToogleTerm',opts) 
+keymap('n', '<leader>tt',':ToggleTerm<CR>,opts)
+keymap('t', '<leader>tt','<ESC><ESC>:ToggleTerm<CR>',opts)

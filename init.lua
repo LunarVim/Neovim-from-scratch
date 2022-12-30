@@ -1,1 +1,1 @@
-require "cybervim"
+require "cybervim.init"

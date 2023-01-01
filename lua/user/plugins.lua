@@ -98,7 +98,7 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- use "easymotion/vim-easymotion"
-  use { 'michaelb/sniprun', run = 'bash ./install.sh' }
+  -- use { 'michaelb/sniprun', run = 'bash ./install.sh' }
 
   use {
     'phaazon/hop.nvim',
@@ -130,6 +130,9 @@ return packer.startup(function(use)
       enable = true,
     },
   }
+
+  -- TODO fzf
+  use 'junegunn/fzf.vim'
   -- use 'ThePrimeagen/refactoring.nvim' -- TODO TOTRY
   if PACKER_BOOTSTRAP then
     require("packer").sync()

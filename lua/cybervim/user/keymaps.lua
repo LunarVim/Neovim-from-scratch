@@ -196,13 +196,14 @@ keymap("n", "<leader>p", "\"+p",opts)
 keymap("v", "<leader>p", "\"+p",opts)
 keymap("n", "<leader>p", "\"+P",opts)
 
-keymap("n", "x", "_x",opts)
+keymap("n", "x", '"_x',opts)
+keymap("v", "x", '"_x',opts)
 -- << Clip Board options
 
 
 -- Maybe the same button for entering in both modes ??
 keymap("i", "<C-c>", "<Esc>",opts)
-keymap("x", "<C-c>", "<Esc>",opts)
+--keymap("x", "<C-c>", "<Esc>",opts)
 
 keymap("n", "Q", "<nop>",opts)
 --Dont know what this does--keymap("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
@@ -226,12 +227,12 @@ map('n', '<leader>of', vim.diagnostic.open_float, opts)
 map('n', '<leader>lo', vim.diagnostic.setloclist, opts)
 
 -- Shift Uab undident line 
+
 keymap('i', '<S-Tab>', "<C-d>",opts)
 --keymap('i', '<C-BS>','<C-o>db',opts) 
 
 -- <leader>te [T]oggleT[E]rm
-keymap('n', '<leader>te',':ToggleTerm<CR>',opts)
---keymap('t', '<leader>te','<ESC><ESC>:ToggleTerm<CR>',opts)
+--keymap('n', '<leader>te',':ToggleTerm<CR>',opts)
 -- make it work on Terminal mode
 
 -- Undo with C-u on insert mode 
@@ -244,8 +245,11 @@ keymap('i', '<C-r>','<C-o><C-r>',opts)
 --keymap('i', '<BS>','<ESC>:lua print("hello")',opts)
 
 --[R][E]place shortcut 
-keymap('v', '<leader>re', 'y:%s/<C-r>*/<C-r>*/<Left><Down>', opts)
-keymap('n', '<leader>re', 'yW:%s/<C-r>*/<C-r>*/<Left><Down>', opts)
+keymap('v', '<leader>re',  'y:%s/<C-r>*/<C-r>*/gc<Left><Left><Left><Down>', opts)
+keymap('n', '<leader>re', 'yW:%s/<C-r>*/<C-r>*/gc<Left><Left><Left><Down>', opts)
+--[R]eplace [A]ll shortcut 
+keymap('v', '<leader>ra',  'y:%s/<C-r>*/<C-r>*/<Left><Down>', opts)
+keymap('n', '<leader>ra', 'yW:%s/<C-r>*/<C-r>*/<Left><Down>', opts)
 --[S][E]arch shortcut 
-keymap("n", "<leader>ee", ":/",opts)
+keymap("n", "<leader>se", "/<Down>",opts)
 

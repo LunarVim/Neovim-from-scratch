@@ -23,7 +23,7 @@ configs.setup({
     lint_events = {"BufWrite", "CursorHold"},
   },
   illuminate = {
-    enable = false,
+    enable = true,
     loaded = true,
   },
   incremental_selection = {

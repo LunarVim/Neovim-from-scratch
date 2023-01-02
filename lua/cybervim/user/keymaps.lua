@@ -114,14 +114,11 @@ keymap('n', '<C-k>', "{",opts)
 keymap('n', '<C-Up>', "{",opts)
 keymap('n', '<C-Down>', "}",opts)
 
+keymap('i', '<C-Up>',    "<C-o>{",opts)
+keymap('i', '<C-Down>',  "<C-o>}",opts)
 
-map("i", '<C-Up>', 
-  function ()
-    print("hello")
-    vim.call("spellbadword")
-  end, 
-  opts
-)
+keymap('i', '<C-v>', "<C-o><C-v>",opts)
+
 -- << move fast with crtl move
 
 -- >> Shift Selection :
@@ -182,19 +179,19 @@ keymap("x", "<leader>p", "\"_dP",opts)
 
 -- >> Clip Board options 
 -- make it not yank it, pretty much everything
-keymap("n", "<leader>y", "\"+y",opts)
-keymap("v", "<leader>y", "\"+y",opts)
-keymap("n", "<leader>Y", "\"+Y",opts)
+keymap("n", "<leader>y", '"_y',opts)
+keymap("v", "<leader>y", '"_y',opts)
+keymap("n", "<leader>Y", '"_Y',opts)
 
-keymap("n", "<leader>d", "\"_d",opts)
-keymap("v", "<leader>d", "\"_d",opts)
+keymap("n", "<leader>d", '"_d',opts)
+keymap("v", "<leader>d", '"_d',opts)
 
-keymap("n", "<leader>D", "\"_D",opts)
-keymap("v", "<leader>D", "\"_D",opts)
+keymap("n", "<leader>D", '"_D',opts)
+keymap("v", "<leader>D", '"_D',opts)
 
-keymap("n", "<leader>p", "\"+p",opts)
-keymap("v", "<leader>p", "\"+p",opts)
-keymap("n", "<leader>p", "\"+P",opts)
+keymap("n", "<leader>p", '"_p',opts)
+keymap("v", "<leader>p", '"_p',opts)
+keymap("n", "<leader>p", '"_P',opts)
 
 keymap("n", "x", '"_x',opts)
 keymap("v", "x", '"_x',opts)

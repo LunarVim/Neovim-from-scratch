@@ -94,13 +94,20 @@ local setup_material = function()
 end
 
 local setup_vscode = function()
+
+  local status_ok, vscode = pcall(require, "material")
+  if not status_ok then 
+    return
+  end
   -- For dark theme (neovim's default)
+  
+  print("Theme: vscode")
   vim.o.background = 'dark'
   -- For light theme
   --vim.o.background = 'light'
 
   local c = require('vscode.colors')
-  require('vscode').setup({
+  vscode.setup({
     -- Enable transparent background
     transparent = true,
 

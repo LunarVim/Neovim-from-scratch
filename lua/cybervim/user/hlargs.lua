@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 hlargs.setup {
-  color = '#515151',
+  color = '#a0a0a0',
   highlight = {},
   excluded_filetypes = {},
   paint_arg_declarations = true,

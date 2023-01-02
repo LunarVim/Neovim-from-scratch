@@ -89,6 +89,7 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
 	}
+  use {'nvim-treesitter/playground'}
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
 
@@ -105,10 +106,8 @@ return packer.startup(function(use)
   --use 'marko-cerovac/material.nvim'
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
-	use {
-    'm-demare/hlargs.nvim',
-    requires = { 'nvim-treesitter/nvim-treesitter' }
-  }
+	use { 'm-demare/hlargs.nvim', requires = { 'nvim-treesitter/nvim-treesitter' } }
+  
   if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

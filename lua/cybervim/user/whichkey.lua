@@ -175,7 +175,7 @@ local mappings = {
   },
   r = {
     name = "Replace",
-    e = { "<leader>re", "[R][E]place" },
+    e = { "y:%s/<C-r>*/<C-r>*/gc<Left><Left><Left><Down>", "[R][E]place" },
     a = { "y:%s/<C-r>*/<C-r>*/<Left><Down>", "[R]place [A]ll" },
   } 
   -- t = {

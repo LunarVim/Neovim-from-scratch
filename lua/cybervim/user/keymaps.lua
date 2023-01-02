@@ -198,6 +198,7 @@ keymap("n", "<leader>p", "\"+P",opts)
 
 keymap("n", "x", '"_x',opts)
 keymap("v", "x", '"_x',opts)
+keymap("x", "x", '"_x',opts)
 -- << Clip Board options
 
 
@@ -208,9 +209,12 @@ keymap("i", "<C-c>", "<Esc>",opts)
 keymap("n", "Q", "<nop>",opts)
 --Dont know what this does--keymap("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
+-- No Need, already define in which key
+--[[
 map("n", "<leader>for", function()
   vim.lsp.buf.format()
 end)
+--]]
 
 --keymap("n", "<C-k>", "<cmd>cnext<CR>zz")
 --keymap("n", "<C-j>", "<cmd>cprev<CR>zz")

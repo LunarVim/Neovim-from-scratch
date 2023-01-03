@@ -9,7 +9,7 @@ configs.setup({
 	highlight = {
 		enable = true, -- false will disable the whole extension
 		disable = { "css" }, -- list of language that will be disabled
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = true,
     custom_captures = {},
 	},
 	autopairs = {
@@ -18,17 +18,17 @@ configs.setup({
 	indent = { enable = true, disable = { "python", "css" } },
   
   query_linter = {
-    enable = true,
+    enable = false,
     use_virtual_text = true,
     lint_events = {"BufWrite", "CursorHold"},
   },
   illuminate = {
-    enable = true,
+    enable = false,
     loaded = true,
   },
   incremental_selection = {
     disable = {},
-    enable = false,
+    enable = true,
     keymaps = {
       init_selection = "gnn",
       node_decremental = "grm",

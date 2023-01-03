@@ -5,8 +5,6 @@ end
 
 local dashboard = require("alpha.themes.dashboard")
 
-
-
 local header = {
   [[                               __                ]],
   [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],

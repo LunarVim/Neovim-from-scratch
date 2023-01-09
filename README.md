@@ -1,7 +1,5 @@
 # Neovim from scratch
 
-This config is designed for [Neovim v0.8.0](https://github.com/neovim/neovim/releases). Please [upgrade](#upgrade-to-latest-release) if you're on an earlier version of the editor.
-
 **Update** When I initially created this repo I didn't anticipate the amount of breaking changes introduced by the rapidly developing plugin ecosystem. If you'd like to use the same basic config as this one as a base I can also recommend my newer repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 
 **Another Update**  All packages are pinned in `master` so it will remain stable. Branches will be updated eventually (currently broken from branch #7 onwards. Hint: Good opportunity for pull requests!).
@@ -11,6 +9,8 @@ Each video will be associated with a branch so checkout the one you are interest
 General Neovim support is available on our [Matrix chat](https://matrix.to/#/#neovim-atmachine:matrix.org).
 
 ## Try out this config
+
+This config requires [Neovim v0.8.0](https://github.com/neovim/neovim/releases). Please [upgrade](#Upgrade-to-Neovim-v0.8.0) if you're on an earlier version of the editor.
 
 Make sure to remove or move your current `nvim` directory
 

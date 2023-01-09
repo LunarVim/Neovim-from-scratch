@@ -8,7 +8,7 @@ This config is intended to be used with Neovim 0.8.
 
 Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
 
-General Neovim support is kindly made available by the [community on Matrix](https://matrix.to/#/#neovim-atmachine:matrix.org) or [Discord](https://discord.gg/Xb9B4Ny) (bridged).
+General Neovim support is available on our [Matrix chat](https://matrix.to/#/#neovim-atmachine:matrix.org).
 
 ## Try out this config
 

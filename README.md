@@ -10,7 +10,7 @@ General Neovim support is available on our [Matrix chat](https://matrix.to/#/#ne
 
 ## Try out this config
 
-This config requires [Neovim v0.8.0](https://github.com/neovim/neovim/releases). Please [upgrade](#Upgrade-to-Neovim-v0.8.0) if you're on an earlier version of the editor.
+This config requires [Neovim v0.8.0](https://github.com/neovim/neovim/releases). Please [upgrade](#upgrade-to-neovim-v0.8.0) if you're on an earlier version of the editor.
 
 Make sure to remove or move your current `nvim` directory
 

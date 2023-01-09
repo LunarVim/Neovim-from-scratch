@@ -2,9 +2,11 @@
 
 **Update** When I initially created this repo I didn't anticipate the amount of breaking changes, if you'd like to use the same basic config as this one as a base I recommend my new repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 
-**Another Update** This repo is updated to work with Neovim 0.8. All packages are pinned in `master` so it should remain stable. Branches will be updated eventually.
+**Another Update** This repo is updated to work with Neovim 0.8. All packages are pinned in `master` so it will remain stable. Branches will be updated eventually (currently broken from branch #7 onwards, good opportunity for pull requests for apprentice devs!).
 
 Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
+
+General Neovim support is available on from the [Lunarvim community on Matrix](https://matrix.to/#/#neovim-atmachine:matrix.org) or [Discord](https://discord.gg/Xb9B4Ny) (bridged).
 
 ## Try out this config
 

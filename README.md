@@ -1,8 +1,8 @@
 # Neovim from scratch
 
-This config is intended to be used with Neovim 0.8.
+This config is designed for [Neovim v0.8.0](https://github.com/neovim/neovim/releases). Please [upgrade](#upgrade-to-latest-release) if you're on an earlier version of the editor.
 
-**Update** When I initially created this repo I didn't anticipate the amount of breaking changes introduced by the rapidly developing plugin infrastructure. If you'd like to use the same basic config as this one as a base I can also recommend my newer repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
+**Update** When I initially created this repo I didn't anticipate the amount of breaking changes introduced by the rapidly developing plugin ecosystem. If you'd like to use the same basic config as this one as a base I can also recommend my newer repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 
 **Another Update**  All packages are pinned in `master` so it will remain stable. Branches will be updated eventually (currently broken from branch #7 onwards. Hint: Good opportunity for pull requests!).
 
@@ -14,12 +14,13 @@ General Neovim support is available on our [Matrix chat](https://matrix.to/#/#ne
 
 Make sure to remove or move your current `nvim` directory
 
-**IMPORTANT** Requires [Neovim v0.8.0](https://github.com/neovim/neovim/releases). Please [upgrade](#upgrade-to-latest-release) if you're on an earlier version. 
+Clone the repository into the correct location
+
 ```
 git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
 ```
 
-Run `nvim` and wait for the plugins to be installed. (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
+Run `nvim` in your terminal and wait for the plugins to be installed. (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
 
 **NOTE** [Mason](https://github.com/williamboman/mason.nvim) is now used to install and manage LSP servers, DAP servers, linters, and formatters via the `:Mason` command.
 
@@ -73,7 +74,7 @@ Next we need to install python support (node is optional)
 
 **NOTE** make sure you have [node](https://nodejs.org/en/) installed, I recommend a node manager like [fnm](https://github.com/Schniz/fnm).
 
-### Upgrade to latest release
+### Upgrade to Neovim v0.8.0
 
 Assuming you [built from source](https://github.com/neovim/neovim/wiki/Building-Neovim#quick-start), `cd` into the folder where you cloned `neovim` and run the following commands. 
 ```

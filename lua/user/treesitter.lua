@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup({
-  ensure_installed = { "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "rust", "java", "yaml", "markdown", "markdown_inline" }, -- one of "all" or a list of languages
+  ensure_installed = { "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "java", "yaml", "markdown", "markdown_inline", "go" }, -- one of "all" or a list of languages
 	ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
 	highlight = {
 		enable = true, -- false will disable the whole extension

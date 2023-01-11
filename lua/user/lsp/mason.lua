@@ -7,7 +7,15 @@ local servers = {
 	-- "bashls",
 	"jsonls",
 	-- "yamlls",
+  "gopls",  -- Mux specific setting
 }
+
+require('dap')
+require('dap-go').setup()  -- Mux specific setting
+require('go').setup()  -- Mux specific setting
+require("nvim-dap-virtual-text").setup()  -- Mux specific setting
+require('telescope').load_extension('dap')  -- Mux specific setting
+vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
 
 local settings = {
 	ui = {

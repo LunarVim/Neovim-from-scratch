@@ -41,23 +41,22 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
+  use "wbthomason/packer.nvim" -- Have packer manage itselfplu
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
-  use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
-
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        --"neovim/nvim-lspconfig",
+    }
   use({
     "kyazdani42/nvim-tree.lua",
     requires = "kyazdani42/nvim-web-devicons",
   })
   -- bufferline
-  use({
-    "akinsho/bufferline.nvim",
-    requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" },
-  })
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   -- lualine
   use({
     "nvim-lualine/lualine.nvim",
@@ -103,7 +102,6 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 

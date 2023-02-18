@@ -45,16 +45,18 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "numToStr/Comment.nvim" -- Easily comment stuff
-    use {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        --"neovim/nvim-lspconfig",
-    }
-  use({
-    "kyazdani42/nvim-tree.lua",
-    requires = "kyazdani42/nvim-web-devicons",
-  })
+    use "onsails/lspkind.nvim"
+    use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    requires = {
+        {"nvim-tree/nvim-web-devicons"},
+        --Please make sure you install markdown and markdown_inline parser
+        {"nvim-treesitter/nvim-treesitter"}
+    }}) 
+    use "numToStr/Comment.nvim" -- Easily comment stuff
+    use ({ "williamboman/mason.nvim","williamboman/mason-lspconfig.nvim"})
+  use({"kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons", })
   -- bufferline
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   -- lualine

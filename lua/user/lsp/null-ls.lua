@@ -16,10 +16,10 @@ null_ls.setup({
     sources = {
         -- Formatting ---------------------
         --  brew install shfmt
-        formatting.shfmt,
+       -- formatting.shfmt,
         -- StyLua
         formatting.stylua,
-        --formatting.clang_format,
+        formatting.clang_format,
 
         -- frontend
         formatting.prettier.with({ -- 比默认少了 markdown
@@ -37,11 +37,11 @@ null_ls.setup({
         }),
         -- rustfmt
         -- rustup component add rustfmt
-        formatting.rustfmt,
+        --formatting.rustfmt,
         -- Python
         -- pip install black
         -- asdf reshim python
-        formatting.black.with({ extra_args = { "--fast" } }),
+        --formatting.black.with({ extra_args = { "--fast" } }),
         -----------------------------------------------------
         -- Ruby
         -- gem install rubocop
@@ -49,10 +49,12 @@ null_ls.setup({
         -----------------------------------------------------
         -- formatting.fixjson,
         -- Diagnostics  ---------------------
-        diagnostics.eslint.with({
-            prefer_local = "node_modules/.bin",
-        }),
+        --diagnostics.eslint.with({
+        --    prefer_local = "node_modules/.bin",
+        --}),
         --
+
+        diagnostics.cpplint,
         -- code actions ---------------------
         code_actions.gitsigns,
         -- code_actions.clang_format,

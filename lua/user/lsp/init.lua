@@ -6,4 +6,6 @@ end
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("user.lsp.handlers").setup()
--- require "user.lsp.null-ls"
+
+require'lspconfig'.clangd.setup{}
+require "user.lsp.null-ls"

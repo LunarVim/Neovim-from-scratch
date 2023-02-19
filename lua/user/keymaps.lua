@@ -34,10 +34,17 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "s=", "<C-w>=", opts)
 
 -- Navigate buffers
-keymap("n", "<A-l>", ":bnext<CR>", opts)
-keymap("n", "<A-h>", ":bprevious<CR>", opts)
+--keymap("n", "<A-l>", ":bnext<CR>", opts)
+--keymap("n", "<A-h>", ":bprevious<CR>", opts)
+keymap("n", "<C-Tab>", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<C-S-Tab>", ":BufferLineCyclePrev<CR>", opts)
 
-keymap("n", "<A-b>", "<C-v>", opts)
+--keymap("n", "<C-Tab>", ":bnext<CR>", opts)
+--keymap("n", "<C-S-Tab>", ":bprevious<CR>", opts)
+
+
+-- viual mode 
+--keymap("n", "<A-b>", "<C-v>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "5j", opts)

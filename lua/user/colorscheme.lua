@@ -5,7 +5,7 @@ vim.g.tokyonight_style = "storm" -- day / night
 vim.g.tokyonight_transparent = true
 vim.g.tokyonight_transparent_sidebar = true
 -- local colorscheme = "tokyonight"
-local colorscheme = "onedark"
+local colorscheme = "tokyonight"
 -- tokyonight
 -- OceanicNext
 -- gruvbox

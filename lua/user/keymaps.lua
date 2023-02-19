@@ -99,6 +99,13 @@ keymap("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
 -- 插件快捷键
 local pluginKeys = {}
+
+-- 代码注释插件
+-- see ./lua/plugin-config/comment.lua
+-- ctrl + /
+keymap("n", "<C-kc>", "gcc", { noremap = false })
+keymap("v", "<C-kc>", "gcc", { noremap = false })
+
 -- lsp 回调函数快捷键设置
 pluginKeys.mapLSP = function(mapbuf)
 	-- rename

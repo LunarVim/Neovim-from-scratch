@@ -15,11 +15,9 @@ bufferline.setup {
     -- as an escape hatch for people who cannot bear it for whatever reason
 	indicator_icon = nil,
     indicator = { style = "icon", icon = "▎"},
-    buffer_close_icon = "",
-    -- buffer_close_icon = '',
+    buffer_close_icon = '',
     modified_icon = "●",
     close_icon = "",
-    -- close_icon = '',
     left_trunc_marker = "",
     right_trunc_marker = "",
     --- name_formatter can be used to change the buffer's label in the bufferline.

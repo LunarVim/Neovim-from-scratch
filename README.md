@@ -4,9 +4,9 @@ This repo is to illustrate the [playlist](https://www.youtube.com/watch?v=ctH-a-
 
 When I initially created this repo I didn't anticipate the amount of breaking changes introduced by the rapidly developing plugin ecosystem. All packages are pinned in `master` so it will remain stable. 
 
-_Note:_ Branches are broken from #07 onwards. Here's how to [help fix](CONTIBUTING.md).
+_Note:_ Branches are broken from #07 onwards. Here's how to [help fix](CONTRIBUTING.md).
 
-**Update** For a simple IDE that builds on these principles and is under active development, I recommend my newer repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide) (and [lunarvim](https://www.lunarvim.org/) which is mature and fully-featured).
+**Update** For a simple IDE that builds on these principles and is under active development, I recommend my newer repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide) as well as [lunarvim](https://www.lunarvim.org/) which is mature and fully-featured.
 
 General support is available on our [Matrix channels](https://matrix.to/#/#neovim-atmachine:matrix.org).
 

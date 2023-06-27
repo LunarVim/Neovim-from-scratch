@@ -14,12 +14,11 @@ Clone your repository. Typically: (back up your current nvim config first!)
 
 `git clone git@github.com:mygithandle/Neovim-from-scratch.git ~/.config/nvim`
 
-If you created the fork sometime in the past, you want to make sure it is up-to-date with any recent changes. Smash the `Sync Fork` button on your project page, or do it from the commandline, checking out the branch that you want to work on. 
+If you created the fork sometime in the past, you want to make sure it is up-to-date with any recent changes. Smash the `Sync Fork` button on your project page, or do it from the commandline. Say you're working on a certain branch. 
 
 ```sh
 git remote add upstream git@github.com:LunarVim/Neovim-from-scratch.git
 git fetch upstream
-git checkout master
 git checkout 11-gitsigns
 git merge upstream/11-gitsigns
 ```

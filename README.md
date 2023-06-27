@@ -22,6 +22,8 @@ Run `nvim` in your terminal and wait for the plugins to be installed. You will n
 
 **NOTE** [Mason](https://github.com/williamboman/mason.nvim) is used to install and manage LSP servers, DAP servers, linters, and formatters via the `:Mason` command.
 
+This config assumes that you have Nerd Fonts v3.0.0 or higher. If you are using an older version then please update your [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) otherwise there will be missing or wrong glyphs
+
 ## Get healthy
 
 Open `nvim` and enter the following:

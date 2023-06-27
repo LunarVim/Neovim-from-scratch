@@ -20,7 +20,7 @@ If you created the fork sometime in the past, you want to make sure it is up-to-
 git remote add upstream git@github.com:LunarVim/Neovim-from-scratch.git
 git fetch upstream
 git checkout master
-git checkout 11-gitsigns` 
+git checkout 11-gitsigns
 git merge upstream/11-gitsigns
 ```
 
@@ -38,14 +38,16 @@ nvim
 
 ## 5. Test and re-test 🔬
 
-`:wq`
-`nvim ~/.config/nvim`
+```sh
+:wq
+nvim ~/.config/nvim
+```
 
 ## 6. Push to your fork on Github ✋
 
 ```sh
 git add .
-git commit -m "replace outdated GitSigns icons`
+git commit -m "replace outdated GitSigns icons"
 git push origin mygitsigns-11
 ```
 
@@ -53,7 +55,7 @@ git push origin mygitsigns-11
 
 When the new branch on your fork is ready to publish, click the `Contribute` button on your forks' project page and select the `Open pull request` option from the drop-down. 
 
-### 8. Making a pull request, be sure to reference any `Issue#` or other `PR#` it solves in the description box.
+*Making a pull request, be sure to reference any `Issue#` or other `PR#` it solves in the description box.*
 
 <hr>
 

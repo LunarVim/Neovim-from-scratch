@@ -1,6 +1,25 @@
 # How to Contribute? ✍
 
-Typically you'll be working through the [video series](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ), you may open `nvim` and there's an error in the config. This is currently true of branches >`06-LSP`. The evolving plugin ecosystem can cause breaking changes to names, `patterns` and `options`. Updated instructions can be found in the plugins's vimdoc (usually kept in doc/), README, or by searching through the Issues and unmerged Pull Requests. This is why we have pinned plugins to working versions (as in `master`).
+There are currently errors showing up in some branches some of the time (currently>=`08-treesitter`) due to plugin updates to names, `patterns` and `options`.  When a plugin updates, instructions can be found in it's vimdoc (usually kept in doc/), README, or by searching through Issues and unmerged Pull Requests of the project page. 
+
+If you want to fix a branch with errors, it can be as mundane as taking the fixes already made in `master` and re-applying them. It's up to the community if you want update the branches. On the plus side, it's a good way to practice being a nerd 🤓
+
+For example: 
+ 
+1. When we started using mason, the lsp folder structure changed. 
+
+2. the dreaded 
+```sh
+[nvim-cmp] Please use window.documentation = cmp.config.window.bordered() instead.
+-- and 
+cmp_nvim_lsp.update_capabilities is deprecated, use cmp_nvim_lsp.default_capabilities instead. See :h depr
+ecated
+```
+
+3. nerdfonts v3.0 requires some updated icons. 
+
+4. plugins could probably be re-pinned to later versions (like the later pinned versions used in [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide/tree/master/lua/user) with Neovim v0.9).
+
 
 ## 1. Fork the Project 🍴
 
@@ -61,4 +80,3 @@ When the new branch on your fork is ready to publish, click the `Contribute` but
 _Hurray!_ **You've just made a valuable contribution! :partying_face:🎉**
 
 ***Thank You***
-

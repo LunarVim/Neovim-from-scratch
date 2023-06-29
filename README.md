@@ -1,10 +1,9 @@
 # Neovim from scratch
 
-This repo is to illustrate the [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ) as a sandbox, with separate branches for each of the videos. 
+When I initially created this repo I didn't anticipate the amount of breaking changes introduced by the rapidly developing plugin ecosystem.  All packages are pinned in `master` so it will remain stable and you can always follow the [videos](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ)
+there if you're getting errors in other branches.   
 
-When I initially created this repo I didn't anticipate the amount of breaking changes introduced by the rapidly developing plugin ecosystem. All packages are pinned in `master` so it will remain stable. 
-
-_Note:_ Branches are broken from #07 onwards. Here's how to [help fix](CONTRIBUTING.md).
+🔍 If you see an error that you can fix [here's how](CONTRIBUTING.md) 🎉.
 
 **Update** For a simple IDE that builds on these principles and is under active development, I recommend my newer repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide) as well as [lunarvim](https://www.lunarvim.org/) which is mature and fully-featured.
 

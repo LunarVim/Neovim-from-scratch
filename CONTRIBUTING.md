@@ -80,4 +80,3 @@ When the new branch on your fork is ready to publish, click the `Contribute` but
 _Hurray!_ **You've just made a valuable contribution! :partying_face:🎉**
 
 ***Thank You***
-

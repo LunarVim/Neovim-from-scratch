@@ -1,12 +1,13 @@
 # Neovim from scratch
 
-**Update** When I initially created this repo I didn't anticipate the amount of breaking changes introduced by the rapidly developing plugin ecosystem. If you'd like to use the same basic config as this one as a base I can also recommend my newer repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
+When I initially created this repo I didn't anticipate the amount of breaking changes introduced by the rapidly developing plugin ecosystem.  All packages are pinned in `master` so it will remain stable and you can always follow the [videos](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ)
+there if you're getting errors in other branches.   
 
-**Another Update**  All packages are pinned in `master` so it will remain stable. Branches will be updated eventually (currently broken from branch #7 onwards. Hint: Good opportunity for pull requests!).
+🔍 If you see an error that you can fix [here's how](CONTRIBUTING.md) 🎉.
 
-This repository and accompanying tutorials outline the building blocks of modern Neovim for your personalized development environment. Each video is associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ). 
+**Update** For a simple IDE that builds on these principles and is under active development, I recommend my newer repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide) as well as [lunarvim](https://www.lunarvim.org/) which is mature and fully-featured.
 
-General Neovim support is available on our [Matrix chat](https://matrix.to/#/#neovim-atmachine:matrix.org).
+General support is available on our [Matrix channels](https://matrix.to/#/#neovim-atmachine:matrix.org).
 
 ## Try out this config
 
@@ -21,6 +22,8 @@ git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
 Run `nvim` in your terminal and wait for the plugins to be installed. You will notice treesitter pulling in a bunch of language parsers the next time you open Neovim.
 
 **NOTE** [Mason](https://github.com/williamboman/mason.nvim) is used to install and manage LSP servers, DAP servers, linters, and formatters via the `:Mason` command.
+
+This config assumes that you have Nerd Fonts v3.0.0 or higher. If you are using an older version then please update your [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) otherwise there will be missing or wrong glyphs
 
 ## Get healthy
 

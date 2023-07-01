@@ -72,7 +72,7 @@ bufferline.setup {
   },
   highlights = {
     fill = {
-      fg = { attribute = "fg", highlight = "#ff0000" },
+      fg = { attribute = "fg", highlight = "Visual" },
       bg = { attribute = "bg", highlight = "TabLine" },
     },
     background = {

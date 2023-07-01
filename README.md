@@ -80,8 +80,8 @@ Next we need to install python support (node is optional)
 Assuming you [built from source](https://github.com/neovim/neovim/wiki/Building-Neovim#quick-start), `cd` into the folder where you cloned `neovim` and run the following commands. 
 ```
 git pull
-make distclean && make CMAKE_BUILD_TYPE=Release
 git checkout v0.8.0
+make distclean && make CMAKE_BUILD_TYPE=Release
 sudo make install
 nvim -v
 ```

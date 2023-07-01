@@ -71,7 +71,7 @@ git push origin mygitsigns-11
 
 ## 7. Open PR 🎁
 
-When the new branch on your fork is ready to publish, click the `Contribute` button on your forks' project page and select the `Open pull request` option from the drop-down. 
+When the new branch on your fork is ready to publish, click the `Contribute` button on your forks' project page and select the `Open pull request` option from the drop-down. Select the branch you're working on. 
 
 *Making a pull request, be sure to reference any `Issue #` or other `PR #` in the description.*
 

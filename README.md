@@ -11,7 +11,7 @@ General support is available on our [Matrix channels](https://matrix.to/#/#neovi
 
 ## Try out this config
 
-This config requires />= [Neovim v0.8.0](https://github.com/neovim/neovim/releases). Please [upgrade](#upgrade-to-neovim-v080) if you're on an earlier version of the editor.
+This config requires >= [Neovim v0.8.0](https://github.com/neovim/neovim/releases). Please [upgrade](#upgrade-to-neovim-v080) if you're on an earlier version of the editor.
 
 Clone the repository into the correct location (make a backup your current `nvim` directory if you want to keep it).
 

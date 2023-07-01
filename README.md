@@ -11,7 +11,7 @@ General support is available on our [Matrix channels](https://matrix.to/#/#neovi
 
 ## Try out this config
 
-This config requires [Neovim v0.8.0](https://github.com/neovim/neovim/releases). Please [upgrade](#upgrade-to-neovim-v080) if you're on an earlier version of the editor.
+This config requires />= [Neovim v0.8.0](https://github.com/neovim/neovim/releases). Please [upgrade](#upgrade-to-neovim-v080) if you're on an earlier version of the editor.
 
 Clone the repository into the correct location (make a backup your current `nvim` directory if you want to keep it).
 
@@ -75,12 +75,12 @@ Next we need to install python support (node is optional)
 
 **NOTE** make sure you have [node](https://nodejs.org/en/) installed, I recommend a node manager like [fnm](https://github.com/Schniz/fnm).
 
-### Upgrade to Neovim v0.8.0
+### Upgrade to Neovim v0.9
 
 Assuming you [built from source](https://github.com/neovim/neovim/wiki/Building-Neovim#quick-start), `cd` into the folder where you cloned `neovim` and run the following commands. 
 ```
 git pull
-git checkout v0.8.0
+git checkout release-0.9
 make distclean && make CMAKE_BUILD_TYPE=Release
 sudo make install
 nvim -v

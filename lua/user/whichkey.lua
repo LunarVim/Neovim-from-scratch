@@ -78,10 +78,14 @@ local opts = {
   nowait = true, -- use `nowait` when creating keymaps
 }
 
+local buffer_theme = "dropdown{previewer = false}"
+local find_file_theme = "dropdown{previewer = false}"
+local find_text_theme = "ivy{}"
+
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_" .. buffer_theme .. ")<cr>",
     "Buffers",
   },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
@@ -90,10 +94,13 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_" .. find_file_theme .. ")<cr>",
     "Find files",
   },
-  ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+  ["F"] = {
+    "<cmd>lua require('telescope.builtin').live_grep(require('telescope.themes').get_" .. find_text_theme .. ")<cr>",
+    "Find text",
+  },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
   p = {

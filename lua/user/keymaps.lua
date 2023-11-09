@@ -19,6 +19,21 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+keymap("n", "<S-Right>", ":bnext<CR>")
+keymap("n", "<S-Left>", ":bprevious<CR>")
+
+vim.cmd([[
+nmap <F9> <cmd>call vimspector#Launch()<cr>
+nmap <F5> <cmd>call vimspector#StepOver()<cr>
+nmap <F8> <cmd>call vimspector#Reset()<cr>
+nmap <F11> <cmd>call vimspector#StepOver()<cr>")
+nmap <F12> <cmd>call vimspector#StepOut()<cr>")
+nmap <F10> <cmd>call vimspector#StepInto()<cr>")
+]])
+keymap('n', "Db", ":call vimspector#ToggleBreakpoint()<cr>")
+keymap('n', "Dw", ":call vimspector#AddWatch()<cr>")
+keymap('n', "De", ":call vimspector#Evaluate()<cr>")
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)

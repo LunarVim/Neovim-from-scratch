@@ -71,7 +71,16 @@ return packer.startup(function(use)
 	use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
 
 	-- Snippets
-  use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" } --snippet engine
+  -- use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" } --snippet engine
+  use({
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!:).
+    run = "make install_jsregexp"
+  })
+
+
   use { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" } -- a bunch of snippets to use
 
 	-- LSP
@@ -104,15 +113,13 @@ return packer.startup(function(use)
     end
   } 
 
-  -- Debug Print, sth. like turbo console
-  use{
-    "andrewferrier/debugprint.nvim",
-    config = function()
-        require("debugprint").setup(opts)
-    end,
-  }
-
+  -- Rust
+  use "neovim/nvim-lspconfig"
   use "simrat39/rust-tools.nvim"
+
+  -- Debugging
+  use "mfussenegger/nvim-dap"
+  use "rcarriga/nvim-dap-ui"
   
 
 	-- Automatically set up your configuration after cloning packer.nvim

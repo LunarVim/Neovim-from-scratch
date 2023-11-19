@@ -102,6 +102,10 @@ return packer.startup(function(use)
 
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
+  use "f-person/git-blame.nvim"
+
+  -- REST / Postman
+  use "diepm/vim-rest-console"
 
   -- Hop
   use {
